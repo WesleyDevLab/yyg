@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>帐户充值 </title>
+<meta content="app-id=518966501" name="apple-itunes-app" charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link href="http://wx.91k8.me/statics/templates/yungou/css/mobile/comm.css?v=130715" rel="stylesheet" type="text/css" />
+<link href="http://wx.91k8.me/statics/templates/yungou/css/mobile/member.css?v=130726" rel="stylesheet" type="text/css" />
+<script src="http://wx.91k8.me/statics/templates/yungou/js/mobile/jquery190.js"  type="text/javascript"></script>
+<script id="pageJS" data="http://wx.91k8.me/statics/templates/yungou/js/mobile/recharge.js?v=1.2" language="javascript" type="text/javascript"></script>
+<link rel="stylesheet" href="http://wx.91k8.me/statics/templates/yungou/css/mobile/top.css">
+<link href="css/new.css" rel="stylesheet" type="text/css" />
+<script>
+
+    </script>
+</head>
+<style type="text/css">
+.g-Total {
+	border-bottom: none;
+}
+a.gray9, .gray9 {
+	border-top: none;
+	text-align: left;
+}
+</style>
+<body>
+<div class="h5-1yyg-v1" id="loadingPicBlock"> 
+  
+  <!-- 栏目页面顶部 --> 
+  
+  <!-- 内页顶部 -->
+  <header class="header">
+    <div class="n-header-wrap">
+      <div class="backbtn"> <a href="javascript:;" onClick="history.go(-1)" class="h-count white"> </a> </div>
+      <div class="h-top-right "> 
+        <!--<a href="http://wx.91k8.me/index.php/mobile/home" class="h-search white"></a>--> 
+      </div>
+      <div class="n-h-tit">
+        <h1 class="header-logo">充值</h1>
+      </div>
+    </div>
+  </header>
+  <div class="g-Total gray9">请选择充值金额<span class="orange arial"></span></div>
+  <!--15-->
+  <section class="clearfix g-member">
+    <div class="g-Recharge">
+      <ul id="ulOption">
+        <li money="10"><a href="javascript:;">10元<s></s></a></li>
+        <li money="20"><a href="javascript:;" >20元<s></s></a></li>
+        <li money="30"><a href="javascript:;" >30元<s></s></a></li>
+        <li money="50"><a href="javascript:;" >50元<s></s></a></li>
+        <li money="100"><a href="javascript:;" class="z-sel">100元<s></s></a></li>
+        <li money="300"><a href="javascript:;" >300元<s></s></a></li>
+        <li money="500"><a href="javascript:;" >500元<s></s></a></li>
+        <li><b>
+          <input type="text" class="z-init"  placeholder="自定义金额" maxlength="8" />
+          <s></s></b></li>
+      </ul>
+    </div>
+    <article class="clearfix mt10 m-round g-pay-ment g-bank-ct">
+      <ul id="ulBankList">
+        <li class="gray6">选择平台充值<em class="orange">100.00</em>元</li>
+        <li class="gray9" urm="9">
+        	<span class="yuanbao"></span>元宝支付<span class="yuanbao_balance">（账户元宝：5）</span><i class="z-bank-Round"><s></s></i>
+       	</li>
+        <li class="gray9" urm="9"><span class="WeChat"></span>微信支付<i class="z-bank-Round"><s></s></i></li>
+        <li class="gray9" data-urm="ICBC-WAP"><span class="Unionpay"></span>银联支付<i class="z-bank-Round"><s></s></i></li>
+      </ul>
+    </article>
+    <div class="mt10 f-Recharge-btn"> <a id="btnSubmit" href="javascript:;" class="orgBtn">立即充值</a> </div>
+  </section>
+  ﻿
+  <footer class="footer">
+    <p>&nbsp;</p>
+    <p class="grayc">客服热线<span class="orange"><a href="tel:400-805-0095">400-805-0095</a> </span></p>
+    <!--<p class="grayc">www.91k8.me</p>--> 
+    <a id="btnTop" href="javascript:;" class="z-top" style="display:none;"> 
+    <!-- <b class="z-arrow"></b> --><img src="http://wx.91k8.me/statics/templates/yungou/css/images/stick01.png"> </a> <a id="shopping_cart" href="http://wx.91k8.me/index.php/mobile/cart/cartlist" class="z-shoppingcart"> <img src="http://wx.91k8.me/statics/templates/yungou/css/images/shopping_cart01.png"> <ins></ins> </a> </footer>
+  <div class="footerdi" style="bottom: 0px;">
+    <ul>
+      <li class="f_home">
+			<a title="首页" href="/?/mobile/mobile"><i class="">&nbsp;</i>首页</a>
+		</li>
+		<!--<li class="f_whole">
+			<a title="所有商品" href="http://wx.91k8.me/index.php/mobile/mobile/glist"><i class="">&nbsp;</i>所有商品</a>
+		</li>-->
+		<li class="f_jiexiao">
+			<a title="即将揭晓" href="announce_soon.html"><i class="">&nbsp;</i>即将揭晓</a>
+		</li>
+		<li class="f_car">
+			<a title="购物车" href="http://wx.91k8.me/index.php/mobile/cart/cartlist"><i class="">&nbsp;</i>购物车</a>
+		</li>
+		<li class="f_personal">
+			<a title="我的云购" href="http://wx.91k8.me/index.php/mobile/home"><i class="">&nbsp;</i>个人中心</a>
+		<li>
+    </ul>
+  </div>
+  <script>
+    var init_step = 5;
+    var person_enable =   15;                          //个人能够购买的数量
+    var goods_enable = 120;                            //商品能够购买的数量
+    var goods_id = '';
+
+
+    function go_buy()
+    {
+        //alert('12321');
+    }
+
+    $(document).ready(function(){
+        // update 08-23
+        $.getJSON('http://wx.91k8.me/index.php/mobile/ajax/cartnum',function(data){
+            $("#btnCart").append('<em>'+data.num+'</em>');
+            if(data.num > 0){
+                $('#shopping_cart ins').html(data.num);
+            }
+
+        });
+        $('#person_time').focus(function(){
+            var v = $(this).val();
+            var w = /^[1-9]{1}\d{0,6}$/;
+            if (!w.test(v)) {
+                alert('只能输正整数哦');
+            }
+        })
+
+        $('.person_time').blur(function(){
+            var obj = $(this);
+            var this_num = parseInt(obj.val());
+            /*
+            if(person_enable >0 && this_num>person_enable){
+                alert('您的元宝最多购买'+person_enable+'次');
+                $("#person_time").val(person_enable);
+                return false;
+            }
+            */
+            if(this_num>goods_enable){
+                alert('该商品最多能购买'+goods_enable+'次');
+                $("#person_time").val(goods_enable);
+                return false;
+            }
+
+
+        })
+        $("#person_number a").click(function(){
+            var obj = $(this);
+            var this_num = parseInt(obj.html());
+            /*
+            if(person_enable >0 && this_num>person_enable){
+                alert('您的元宝最多购买'+person_enable+'次');
+                $("#person_time").val(person_enable);
+                return false;
+            }
+            */
+            if(this_num>goods_enable){
+                alert('该商品最多能购买'+goods_enable+'次');
+                $("#person_time").val(goods_enable);
+                return false;
+            }
+            $("#person_number a").removeClass("selected");
+            obj.addClass("selected");
+            $("#person_time").val(this_num);
+        })
+        //提交直接购物
+        $(".confirm_btn").click(function(){
+            //$(".weui_mask_transparent").hide();
+            var num = $('#person_time').val();
+            console.log(goods_id+'>'+num);
+            if(num>0){
+                $.getJSON('http://wx.91k8.me/index.php/mobile/ajax/addShopCart/'+goods_id+'/'+num,function(data){
+                    if(data.code==1){
+                        addsuccess('添加失败');
+                    }else if(data.code==0){
+                        addsuccess('添加成功');
+                        //location.href="http://wx.91k8.me/index.php/mobile/cart/cartlist";
+                    }
+                });
+                return false;
+            }else{
+                alert('请添加数量');
+            }
+
+        });
+        function addsuccess(dat){
+            $('.choose_people').hide();
+            $('.weui_mask_transparent').css('display','none');
+            $("#pageDialogBG .Prompt").text("");
+            var w=($(window).width()-255)/2,
+                    h=($(window).height()-45)/2;
+            $("#pageDialogBG").css({top:h,left:w,opacity:0.8});
+            $("#pageDialogBG").stop().fadeIn(1000);
+            $("#pageDialogBG .Prompt").append('<s></s>'+dat);
+            $("#pageDialogBG").fadeOut(1000);
+            //购物车数量
+            $.getJSON('http://wx.91k8.me/index.php/mobile/ajax/cartnum',function(data){
+                $("#btnCart").append('<em>'+data.num+'</em>');
+                if(data.num > 0){
+                    $('#shopping_cart ins').html(data.num);
+                }
+            });
+        }
+
+
+    })
+    
+</script> 
+  <script language="javascript" type="text/javascript">
+  var Path = new Object();
+  Path.Skin="http://wx.91k8.me/statics/templates/yungou";  
+  Path.Webpath = "http://wx.91k8.me/index.php";
+  
+var Base={head:document.getElementsByTagName("head")[0]||document.documentElement,Myload:function(B,A){this.done=false;B.onload=B.onreadystatechange=function(){if(!this.done&&(!this.readyState||this.readyState==="loaded"||this.readyState==="complete")){this.done=true;A();B.onload=B.onreadystatechange=null;if(this.head&&B.parentNode){this.head.removeChild(B)}}}},getScript:function(A,C){var B=function(){};if(C!=undefined){B=C}var D=document.createElement("script");D.setAttribute("language","javascript");D.setAttribute("type","text/javascript");D.setAttribute("src",A);this.head.appendChild(D);this.Myload(D,B)},getStyle:function(A,B){var B=function(){};if(callBack!=undefined){B=callBack}var C=document.createElement("link");C.setAttribute("type","text/css");C.setAttribute("rel","stylesheet");C.setAttribute("href",A);this.head.appendChild(C);this.Myload(C,B)}}
+function GetVerNum(){var D=new Date();return D.getFullYear().toString().substring(2,4)+'.'+(D.getMonth()+1)+'.'+D.getDate()+'.'+D.getHours()+'.'+(D.getMinutes()<10?'0':D.getMinutes().toString().substring(0,1))}
+Base.getScript('http://wx.91k8.me/statics/templates/yungou/js/mobile/Bottom.js?v='+GetVerNum());
+</script> 
+</div>
+</body>
+</html>

@@ -1,0 +1,767 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>品牌名称</title>
+<meta content="app-id=518966501" name="apple-itunes-app" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<link href="http://wx.91k8.me/statics/templates/yungou/css/mobile/comm.css" rel="stylesheet" type="text/css" />
+<link href="http://wx.91k8.me/statics/templates/yungou/css/mobile/goods.css" rel="stylesheet" type="text/css" />
+<script src="http://wx.91k8.me/statics/templates/yungou/js/mobile/jquery190.js" language="javascript" type="text/javascript"></script>
+<link href="css/new.css" rel="stylesheet" type="text/css" />
+<style>
+    .weui_mask_transparent {
+        position: fixed;
+        z-index: 60;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    /**请选择参与人次弹出框**/
+	.choose_people {
+	    border-top: 3px solid #F5484C;
+	    position: fixed;
+	    width: 94%;
+	    bottom: 0;
+	    background-color: #fff;
+	    z-index: 999999;
+	    padding: 0% 3% 3%;
+	    color: #9c9c9c;
+	    text-align: center;
+	}
+	.choose_people h2{
+	    border-bottom: 1px solid #eee;
+	    line-height: 40px;
+	    text-align: left;
+	}
+	.surplus {
+	    width: 100%;
+	    text-align: center;
+	    line-height: 12px;
+	    height: 30px;
+	}
+	ins.doudou {
+	    color: #F5484C;
+	}
+	a.confirm_btn {
+	    color: #fff;
+	    font-size: 16px;
+	    width: 100%;
+	    background-color: #F5484C;
+	    text-align: center;
+	    padding: 5px 0;
+	    border-radius: 10px;
+	    display: block;
+	}
+	.number_various {
+	    margin-top: 15px;
+	    text-align: center;
+	}
+	a.reduce {
+	    float: left;
+	}
+	input.person_time {
+	    width: 70%;
+	    border: 1px solid #ccc;
+	    background-color: #eee;
+	    height: 28px;
+	    text-align: center;
+	    margin: 0 auto;
+	}
+	a.plus {
+	    float: right;
+	}
+	.person_number {
+	    width: 80%;
+	    text-align: center;
+	    margin: 0 auto;
+	}
+	.person_number ul {
+	    width: 100%;
+	}
+	.person_number li {
+		width:45px;
+	    text-align: center;
+	    display: inline-block;
+	}
+	.justify_list{text-align: justify;text-justify:distribute-all-lines;}
+	.justify_list:after {width: 100%;height: 0;margin: 0;display: inline-block;overflow: hidden;content: '';}
+	a.selected {
+	    background-color: #f00;
+	    color: #fff;
+	    border: none;
+	}
+	.person_number a {
+	    border: 1px solid #ccc;
+	    padding: 3px 10px;
+	    display: inline-block;
+	    border-radius: 5px;
+	    width: 23px;
+	    color:#999;
+	}
+	.choose_number {
+	    float: left;
+	    width: 80%;
+	    margin-bottom: 10px;
+	    padding: 0 10%;
+	}
+	.clear{clear: both;}
+	.roby-go-buy{
+	   height:35px;
+	   width:90%;
+	   line-height: 35px;
+	   border-radius: 5px;
+	   color: #fff;
+	   font-size:16px;
+	   text-align: center;
+	   margin: 15px auto 10px;
+	   background: #F5484C;
+	}
+a.closed_btn {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    font-size: 29px;
+    display: block;
+    color: #999;
+    font-weight: 400;
+}
+</style>
+<script type="text/javascript">
+	/**最新揭晓倒计时
+	function fresh() {
+            var d = "2016-10-30 10:22:48";
+            var endtime = new Date(d);
+            var nowtime = new Date();
+            var leftsecond = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
+            d = parseInt(leftsecond / 3600 / 24);
+            h = parseInt((leftsecond / 3600) % 24);
+            m = parseInt((leftsecond / 60) % 60);
+            s = parseInt(leftsecond % 60);
+            var td = d * 24 + h;
+            if(td<10){
+         		td="0"+td
+         	}
+            if(m<10){
+         		m="0"+m
+         	}
+            if(s<10){
+         		s="0"+s
+         	}
+            $("#emH").html(td);
+            $("#emM").html(m);
+            $("#emS").html(s);
+            if (leftsecond <= 0) {
+                    $("#emH").html("00");
+                    $("#emM").html("00");
+                    $("#emS").html("00");
+                clearInterval(sh);
+            }
+        }
+        fresh();
+        var sh;
+        sh = setInterval(fresh, 1000);**/
+        var interval = 1000; 
+		function ShowCountDown(year,month,day,divname){ 
+			var now = new Date(); 
+			var endDate = new Date(year, month-1, day); 
+			var leftTime=endDate.getTime()-now.getTime(); 
+			var leftsecond = parseInt(leftTime/1000); 
+			var day1=Math.floor(leftsecond/(60*60*24)); 
+			var hour=Math.floor((leftsecond-day1*24*60*60)/3600); 
+			var minute=Math.floor((leftsecond-day1*24*60*60-hour*3600)/60); 
+			var second=Math.floor(leftsecond-day1*24*60*60-hour*3600-minute*60); 
+			var cc = document.getElementById(divname); 
+			var td = day1 * 24 + hour;
+			if(hour<10){
+	         		hour="0"+hour;
+	         	}
+	            if(minute<10){
+	         		minute="0"+minute;
+	         	}
+	            if(second<10){
+	         		second="0"+second;
+	         	}
+			cc.innerHTML = "揭晓倒计时:"+td+":"+minute+":"+second; 
+			} 
+			 
+		window.setInterval(function(){ShowCountDown(2016,10,28,'divdown1');}, interval); 
+        
+</script>
+</head>
+<body>
+<div class="weui_mask_transparent"></div>
+<!--选择人次-->
+<div class="choose_people" style="display:none;">
+    <h2>请选择参与人次</h2>
+    <div class="number_various">
+    	<div class="choose_number">
+        	<a class="reduce"><img src="http://wx.91k8.me/statics/templates/yungou/css/images/reduce.png" onclick="Calculation('reduce')"></a>
+        	<input type="number" class="person_time" value="" id="person_time"/>
+        	<a class="plus"><img src="http://wx.91k8.me/statics/templates/yungou/css/images/plus.png"  onclick="Calculation('plus')"></a>
+        </div>
+        <div id="person_number"  class="person_number">
+            <ul class="justify_list"> 
+                <li><a id="number_10" href="javascript:void(0);">10</a></li>
+                <li><a id="number_20" href="javascript:void(0);">20</a></li>
+                <li><a id="number_50" href="javascript:void(0);">50</a></li>
+                <li><a id="number_100" href="javascript:void(0);">100</a></li>
+                <li style="margin-right:0;"><a id="number_200" href="javascript:void(0);">200</a></li>
+            </ul>
+        </div>
+    </div>
+
+   <div class="surplus"><span>您账户当前共有<ins><b id="jq_money"></b></ins>淘豆</span>, <a href="http://wx.91k8.me/index.php/mobile/home/userrecharge" style="color:#F5484C;text-decoration: underline;font-size:14px;">去充值</a></div>
+   <div class="surplus red">该商品最多购买<ins class="degrees">86</ins>次</div>
+	<a href="" class="confirm_btn">确定</a>
+	<a href="" class="closed_btn" onclick="choose_people.style.display='none'">×</a>
+</div>
+<!--END选择人次-->
+    <div class="h5-1yyg-v1" id="loadingPicBlock">
+    
+<!-- 栏目页面顶部 -->
+
+<!--g-snav u-nav -->   <!-- 栏目导航 -->
+
+    <!--<nav class="g-snav u-nav">
+	    <div class="g-snav-lst"><a href="/?/mobile/mobile" >惠玩车</a> </div>
+
+	    <div class="g-snav-lst"><a href="http://wx.91k8.me/index.php/mobile/mobile/glist" >所有商品</a></div>
+
+	    <div class="g-snav-lst"><a href="http://wx.91k8.me/index.php/mobile/mobile/lottery" >揭晓中</a></div>
+
+	    <div class="g-snav-lst"><a href="http://wx.91k8.me/index.php/mobile/shaidan/" >获奖晒单</a></div>
+
+	       <!--<div class="g-snav-lst"><a href="http://wx.91k8.me/index.php/mobile/home/zhuanzhang" >用户转帐</a></div>-->
+    <!--</nav>-->
+
+<header class="header">
+    <div class="n-header-wrap">
+        <div class="backbtn">
+            <a href="javascript:;" onClick="history.go(-1)" class="h-count white">
+            </a>
+        </div>
+
+
+        <div class="n-h-tit"><h1 class="header-logo">品牌名称</h1></div>
+    </div>
+</header><script src="http://wx.91k8.me/statics/templates/yungou/js/mobile/ajax.js"></script>
+
+<!-- 内页顶部 -->
+
+    <section class="goodsCon">
+        <!-- 列表 -->
+        <div class="goodsList">
+			<ul>
+			  <li><span id="35" class="z-Limg"><img src="http://wx.91k8.me/statics/uploads/shopimg/20160906/68603972154883.jpg"></span>
+			    <div class="goodsListR">
+			      <a href="'+data[i].good_url+'" class="prolist_name"><h2 id="35"><em class="red">【第一期】</em>普通洗车服务&nbsp;开呗养车 单次 </h2></a>
+			      <div class="pRate">
+			        <div class="issue">期号：15961244</div>
+			        <div id="divdown1" class="announce_countdown">揭晓倒计时:</div>
+			        <!--<div class="announce_countdown">
+			        	揭晓倒计时
+			            <em id="emH"></em> <strong>:</strong><em id="emM"></em><strong>:</strong><em id="emS"></em>
+			        </div>-->
+			        <div class="p-bar04 participation" onclick="go_buy();" attr_goodsid="35" attr_maxnum="undefined" attr_times="1">立即抢购</div>
+			      </div>
+			    </div>
+			  </li>
+			</ul>
+			<ul>
+			  <li><span id="44" class="z-Limg"><img src="http://wx.91k8.me/statics/uploads/shopimg/20160902/74326280782158.jpg"></span>
+			    <div class="goodsListR">
+			      <a href="'+data[i].good_url+'" class="prolist_name"><h2 id="44"><em class="red">【第一期】</em>汽车手机支架&nbsp;吸盘磁铁式手机支</h2></a>
+			      <div class="pRate">
+			      	<div class="issue">期号：15961244</div>
+			        <div class="Progress-bar" id="44">
+			          <p class="u-progress"><span class="pgbar" style="width:0%;"><span class="pging"></span></span></p>
+			          <ul class="Pro-bar-li">
+			            <li class="P-bar02"><em>38</em>总需人次</li>
+			            <li class="P-bar03"><em>38</em>剩余人次</li>
+			          </ul>
+			        </div>
+			        <div class="p-bar04 participation" onclick="go_buy();" attr_goodsid="44" attr_maxnum="undefined" attr_times="1">立即参与</div>
+			      </div>
+			    </div>
+			  </li>
+			</ul>
+			<ul>
+			  <li><span id="41" class="z-Limg"><img src="http://wx.91k8.me/statics/uploads/shopimg/20160826/30103261176203.jpg"></span>
+			    <div class="goodsListR">
+			      <a href="'+data[i].good_url+'" class="prolist_name"><h2 id="41"><em class="red">【待上新】</em>豹王机油格&nbsp;机滤&nbsp;汽车保养&nbsp;更</h2></a>
+			      <div class="pRate">
+			        <div class="wish_value">心愿值：1800</div>
+			      </div>
+			    </div>
+			  </li>
+			</ul>
+
+			<div id="divGoodsLoading" class="loading" style="display:none;"><b></b>正在加载...</div>
+            <a id="btnLoadMore" class="loading" href="javascript:;" style="display: block;">点击加载更多</a>
+            <a id="btnLoadMore2" class="loading" style="display:none;">没有数据</a>
+            <a id="btnLoadMore3" class="loading" style="display:none;">已经到底了</a>
+        </div>
+    </section>
+	
+    <input id="urladdress" value="" type="hidden" />
+    <input id="pagenum" value="" type="hidden" />
+﻿<footer class="footer">
+	<!--<div class="u-ft-nav" id="fLoginInfo">-->
+	    <!--&lt;!&ndash;<span><a href="/?/mobile/mobile">首页</a><b></b></span>&ndash;&gt;-->
+		<!--<span><a href="http://wx.91k8.me/index.php/mobile/mobile/about">新手指南</a><b></b></span>-->
+		<!---->
+		<!--<span>-->
+		<!--<a  class="Member" href="/index.php/mobile/home"></a>-->
+		<!--<a class="Exit" href="/index.php/mobile/user/cook_end">退出</a>-->
+		<!--</span>-->
+		<!--	-->
+		<!---->
+	<!--</div>-->
+	<!--<p class="m-ftA">-->
+		<!--<a href="http://wx.91k8.me/index.php/">触屏版</a>|<a href="http://wx.91k8.me/index.php">电脑版</a>-->
+	<!--</p>-->
+    <p>&nbsp;</p>
+	<p class="grayc">客服热线<span class="orange"><a href="tel:400-805-0095">400-805-0095</a>   </span></p>
+	<!--<p class="grayc">www.91k8.me</p>-->
+	<a id="btnTop" href="javascript:;" class="z-top" style="display:none;">
+		<!-- <b class="z-arrow"></b> --><img src="http://wx.91k8.me/statics/templates/yungou/css/images/stick01.png">
+	</a>
+	<a id="shopping_cart" href="http://wx.91k8.me/index.php/mobile/cart/cartlist" class="z-shoppingcart">
+		<img src="http://wx.91k8.me/statics/templates/yungou/css/images/shopping_cart01.png">
+		<ins></ins>
+	</a>
+</footer>
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+
+<div class="footerdi" style="bottom: 0px;">
+	<ul>
+		<li class="f_home">
+			<a title="首页" href="index.html"><i class="">&nbsp;</i>首页</a>
+		</li>
+		<!--<li class="f_whole">
+			<a title="所有商品" href="http://wx.91k8.me/index.php/mobile/mobile/glist"><i class="cur">&nbsp;</i>所有商品</a>
+		</li>-->
+		<li class="f_jiexiao">
+			<a title="即将揭晓" href="announce_soon.html"><i class="">&nbsp;</i>即将揭晓</a>
+		</li>
+		<li class="f_car">
+			<a title="购物车" href="http://wx.91k8.me/index.php/mobile/cart/cartlist"><i class="">&nbsp;</i>购物车</a>
+		</li>
+		<li class="f_personal">
+			<a title="我的云购" href="my_personage.html"><i class="">&nbsp;</i>个人中心</a>
+		<li>
+	</ul>
+</div>
+
+<script>
+    var init_step = 5;
+    var person_enable =   16;                          //个人能够购买的数量
+    var goods_enable = 120;                            //商品能够购买的数量
+    var goods_id = '';
+
+
+    function go_buy()
+    {
+        //alert('12321');
+    }
+
+    $(document).ready(function(){
+        // update 08-23
+        $.getJSON('http://wx.91k8.me/index.php/mobile/ajax/cartnum',function(data){
+            $("#btnCart").append('<em>'+data.num+'</em>');
+            if(data.num > 0){
+                $('#shopping_cart ins').html(data.num);
+            }
+
+        });
+        $('#person_time').focus(function(){
+            var v = $(this).val();
+            var w = /^[1-9]{1}\d{0,6}$/;
+            if (!w.test(v)) {
+                alert('只能输正整数哦');
+            }
+        })
+        /**参与弹出选择人次**/
+        var showcart = ('.participation');
+        $(document).on('click',showcart,function(){
+
+            if($(this).hasClass('canyudis')){
+                return false;
+            }
+            var default_times = $(this).attr('attr_times');
+            goods_enable = $(this).attr('attr_maxnum');
+            goods_id = $(this).attr('attr_goodsid');
+            $(".choose_people").show();
+            $(".weui_mask_transparent").show();
+            $('#jq_money').html('16');
+            if(default_times>0){
+                $('.person_time').val(default_times);
+            }else{
+                $('.person_time').val(1);
+            }
+        });
+
+
+
+        $('.person_time').blur(function(){
+            var obj = $(this);
+            var this_num = parseInt(obj.val());
+            /*
+            if(person_enable >0 && this_num>person_enable){
+                alert('您的淘币最多购买'+person_enable+'次');
+                $("#person_time").val(person_enable);
+                return false;
+            }
+            */
+            if(this_num>goods_enable){
+                alert('该商品最多能购买'+goods_enable+'次');
+                $("#person_time").val(goods_enable);
+                return false;
+            }
+
+
+        })
+        $("#person_number a").click(function(){
+            var obj = $(this);
+            var this_num = parseInt(obj.html());
+            /*
+            if(person_enable >0 && this_num>person_enable){
+                alert('您的淘币最多购买'+person_enable+'次');
+                $("#person_time").val(person_enable);
+                return false;
+            }
+            */
+            if(this_num>goods_enable){
+                alert('该商品最多能购买'+goods_enable+'次');
+                $("#person_time").val(goods_enable);
+                return false;
+            }
+            $("#person_number a").removeClass("selected");
+            obj.addClass("selected");
+            $("#person_time").val(this_num);
+        })
+        //提交直接购物
+        $(".confirm_btn").click(function(){
+            //$(".weui_mask_transparent").hide();
+            var num = $('#person_time').val();
+            console.log(goods_id+'>'+num);
+            if(num>0){
+                $.getJSON('http://wx.91k8.me/index.php/mobile/ajax/addShopCart/'+goods_id+'/'+num,function(data){
+                    if(data.code==1){
+                        addsuccess('添加失败');
+                    }else if(data.code==0){
+                        addsuccess('添加成功');
+                        //location.href="http://wx.91k8.me/index.php/mobile/cart/cartlist";
+                    }
+                });
+                return false;
+            }else{
+                alert('请添加数量');
+            }
+
+        });
+        function addsuccess(dat){
+            $('.choose_people').hide();
+            $('.weui_mask_transparent').css('display','none');
+            $("#pageDialogBG .Prompt").text("");
+            var w=($(window).width()-255)/2,
+                    h=($(window).height()-45)/2;
+            $("#pageDialogBG").css({top:h,left:w,opacity:0.8});
+            $("#pageDialogBG").stop().fadeIn(1000);
+            $("#pageDialogBG .Prompt").append('<s></s>'+dat);
+            $("#pageDialogBG").fadeOut(1000);
+            //购物车数量
+            $.getJSON('http://wx.91k8.me/index.php/mobile/ajax/cartnum',function(data){
+                $("#btnCart").append('<em>'+data.num+'</em>');
+                if(data.num > 0){
+                    $('#shopping_cart ins').html(data.num);
+                }
+            });
+        }
+
+
+    })
+    //点击加减方法
+    function Calculation(obj){
+        var old_num = parseInt($("#person_time").val());    //当前购买次数
+        if(obj =="reduce"){         //减
+            if(old_num>init_step){
+                $("#person_time").val(old_num-init_step);
+            }else{
+                alert('亲，不能再减了');
+                return false;
+            }
+        }else if(obj =="plus"){
+            var now_num = old_num + init_step;
+            /*
+            if(person_enable>0 && now_num>person_enable){
+                alert('您的淘币最多购买'+person_enable+'次');
+                return false;
+            }
+            */
+            if(now_num>goods_enable){
+                alert('该商品最多能购买'+goods_enable+'次');
+                return false;
+            }
+            $("#person_time").val(now_num);
+        }
+    }
+    //点击数字方法
+    function selected(id){
+        $("#person_number a").each(function(){
+            $(this).removeClass("selected");
+            if($(this).attr("id") == id ){
+                $(this).addClass("selected");
+                $("#person_time").val($(this).text());
+            }
+        });
+    }
+</script>
+<script type="text/javascript">
+    $(".weui_mask_transparent").hide();
+    function trim(str) {
+        return str.replace(/(^\s*)|(\s*$)/g, "");
+    }
+    var getParam = function (name) {
+        var search = document.location.search;
+        var pattern = new RegExp("[?&]" + name + "\=([^&]+)", "g");
+        var matcher = pattern.exec(search);
+        var items = null;
+        if (null != matcher) {
+            try {
+                items = decodeURIComponent(decodeURIComponent(matcher[1]));
+            } catch (e) {
+                try {
+                    items = decodeURIComponent(matcher[1]);
+                } catch (e) {
+                    items = matcher[1];
+                }
+            }
+        }
+        return items;
+    };
+
+//打开页面加载数据
+window.onload=function(){
+
+    var cateid = getParam('cateid');
+    if(cateid > 0){
+       var text = $('#'+cateid).text();
+       $('#product_all_0').attr('cid',cateid);
+        $('#product_all_0').html(text+'<s class="arrowUp"></s>');
+        glist_json(+cateid+"/10");
+    }
+    else {
+        glist_json("list/10");
+    }
+
+
+	//购物车数量
+	$.getJSON('http://wx.91k8.me/index.php/mobile/ajax/cartnum',function(data){
+		if(data.num){
+			$("#btnCart").append('<em>'+data.num+'</em>');
+		}
+	});
+
+}
+//获取数据
+function glist_json(parm){
+	$("#urladdress").val('');
+	$("#pagenum").val('');
+	$.getJSON('http://wx.91k8.me/index.php/mobile/mobile/glistajax/'+parm,function(data){
+		$("#divGoodsLoading").css('display','none');
+        console.log(parm);
+		//roby 8-8将价格排序变为可切换
+		var canshu = parm.split('/');
+		var sort = canshu[1];		
+		if(sort=='50'){
+			$("#divGoodsNav li").eq(3).attr('order',60);
+		}
+		if(sort == '60'){
+			$("#divGoodsNav li").eq(3).attr('order',50);
+		}
+        //分类选中与不选中
+        $('#divGoodsNav dl a').each(function(){
+            var obj = $(this);
+            if( obj.attr('id') == canshu[0]){
+                obj.parent().addClass('pitch_on').removeClass('weed_out');
+            }else{
+                obj.parent().removeClass('pitch_on').addClass('weed_out');
+            }
+        })
+        if(canshu[0]>0){
+            $('#divGoodsNav dl dd').eq(0).addClass('weed_out').removeClass('pitch_on');
+        }else{
+            $('#divGoodsNav dl dd').eq(0).addClass('pitch_on').removeClass('weed_out');
+        }
+		if(data[0].sum){
+			var fg=parm.split("/");
+			$("#urladdress").val(fg[0]+'/'+fg[1]);
+			$("#pagenum").val(data[0].page);
+			for(var i=0;i<data.length;i++){
+			var ul='<ul><li>';
+				ul+='<span id="'+data[i].id+'" class="z-Limg"><img src="http://wx.91k8.me/statics/uploads/'+data[i].thumb+'"></span>';
+				ul+='<div class="goodsListR">';
+				ul+='<a href="'+data[i].good_url+'" class="prolist_name"><h2 id="'+data[i].id+'">'+(data[i].title).substr(0,15)+'</h2></a>';
+				ul+='<div class="pRate">';
+				ul+='<div class="Progress-bar" id="'+data[i].id+'">';				
+				ul+='<p class="u-progress"><span class="pgbar" style="width:'+(data[i].canyurenshu / data[i].zongrenshu)*100+'%;"><span class="pging"></span></span></p>';
+				ul+='<ul class="Pro-bar-li">';
+				//ul+='<li class="P-bar01"><em>'+data[i].canyurenshu+'</em>已参与</li>';
+				ul+='<li class="P-bar02"><em>'+data[i].zongrenshu+'</em>总需人次</li>';
+				ul+='<li class="P-bar03"><em>'+data[i].shenyurenshu+'</em>剩余人次</li>';
+				ul+='</ul></div>';
+				//ul+='<a class="add " codeid="'+data[i].id+'" href="javascript:;"><s></s></a>';
+                ul+='<div class="p-bar04 participation" onclick="go_buy();" attr_goodsid="'+data[i].id+'" attr_maxnum="'+data[i].attr_maxnum+'" attr_times="'+data[i]['default_times']+'">立即参与</div>';
+				ul+='</div></div></li></ul>';
+				$("#divGoodsLoading").before(ul);			
+			}
+			if(data[0].page<=data[0].sum){
+				$("#btnLoadMore").css('display','block');
+				$("#btnLoadMore2").css('display','none');
+				$("#btnLoadMore3").css('display','none');
+			}else if(data[0].page>data[0].sum){
+				$("#btnLoadMore").css('display','none');
+				$("#btnLoadMore2").css('display','none');
+				$("#btnLoadMore3").css('display','block');
+			}
+		}else{
+			$("#btnLoadMore").css('display','none');
+			$("#btnLoadMore2").css('display','block');	
+			$("#btnLoadMore3").css('display','none');			
+		}
+	});
+}
+$(document).ready(function(){
+	//即将揭晓,人气,最新,价格	
+	$("#divGoodsNav li:not(:last)").click(function(){
+		var l=$(this).index();
+		$("#divGoodsNav li").removeClass().eq(l).addClass('current');
+		var parm=$("#divGoodsNav li").eq(l).attr('order');
+		$("#divGoodsLoading").css('display','block');
+		$(".goodsList ul").remove();
+		//roby 将商品分类传值
+		var cid = $('#product_all_0').attr('cid');
+		if(!cid){
+			cid = "list";
+		}
+		var glist=glist_json(cid+"/"+parm);
+	});
+	
+	//商品分类
+	var dl=$("#divGoodsNav dl"),
+		last=$("#divGoodsNav li:last"),
+		first=$("#divGoodsNav dd:first");
+	$("#divGoodsNav li:last a:first").click(function(){
+		$('#product_all_0').attr('cid','');
+		if(dl.css("display")=='none'){
+			dl.show();
+			last.addClass("gSort");
+			first.addClass("sOrange");			
+		}else{
+			dl.hide();
+			last.removeClass("gSort");
+			first.removeClass("sOrange");
+		}
+	});
+	$("#divGoodsNav  dd").click(function(){
+
+
+		var s=$(this).index();
+		var t=$("#divGoodsNav .gSort dd a").eq(s).html();
+		var id=$("#divGoodsNav .gSort dd a").eq(s).attr('id');
+		$('#product_all_0').attr('cid',id);		//roby商品分类赋值
+		$("#divGoodsNav .gSort a:first").html(t+'<s class="arrowUp"></s>');
+		var l=$("#divGoodsNav .current").index(),
+			parm=$("#divGoodsNav li").eq(l).attr('order');
+		if(id){
+			$("#divGoodsLoading").css('display','block');
+			$(".goodsList ul").remove();
+			glist_json(id+'/'+parm);
+		}else{
+			glist_json("list/10");
+			$(".goodsList ul").remove();
+		}
+		dl.hide();
+		last.removeClass("gSort");
+		first.removeClass("sOrange");
+	});
+	//加载更多
+	$("#btnLoadMore").click(function(){		
+		var url=$("#urladdress").val(),
+			page=$("#pagenum").val();
+		glist_json(url+'/'+page);
+	});	
+	//返回顶部
+	$(window).scroll(function(){
+		if($(window).scrollTop()>50){
+			$("#btnTop").show();
+		}else{
+			$("#btnTop").hide();
+		}
+	});
+	$("#btnTop").click(function(){
+		$("body").animate({scrollTop:0},10);
+	});
+	//添加到购物车
+	$(document).on("click",'.add',function(){
+		var codeid=$(this).attr('codeid');
+		$.getJSON('http://wx.91k8.me/index.php/mobile/ajax/addShopCart/'+codeid+'/1',function(data){
+			if(data.code==1){
+				addsuccess('添加失败');
+			}else if(data.code==0){
+				addsuccess('添加成功');				
+			}return false;
+		});
+	});
+	function addsuccess(dat){
+		$("#pageDialogBG .Prompt").text("");
+		var w=($(window).width()-255)/2,
+			h=($(window).height()-45)/2;
+		$("#pageDialogBG").css({top:h,left:w,opacity:0.8});
+		$("#pageDialogBG").stop().fadeIn(1000);
+		$("#pageDialogBG .Prompt").append('<s></s>'+dat);
+		$("#pageDialogBG").fadeOut(1000);
+		//购物车数量
+		$.getJSON('http://wx.91k8.me/index.php/mobile/ajax/cartnum',function(data){
+			$("#btnCart").append('<em>'+data.num+'</em>');
+		});
+	}
+	//跳转页面
+	var gt='.goodsList span, .goodsList h2, .goodsList, .Progress-bar';
+	$(document).on('click',gt,function(){
+		var id=$(this).attr('id');
+		if(id){
+			window.location.href="http://wx.91k8.me/index.php/mobile/mobile/item/"+id;
+		}			
+	});
+
+});
+
+</script>
+
+</div>
+</body>
+</html>
+<style>
+#pageDialogBG{-webkit-border-radius:5px; width:255px;height:45px;color:#fff;font-size:16px;text-align:center;line-height:45px;}
+</style>
+<div id="pageDialogBG" class="pageDialogBG">
+<div class="Prompt"></div>
+</div>

@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta content="app-id=518966501" name="apple-itunes-app" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta content="telephone=no" name="format-detection" />
+	<title>商品详情</title>
+	<link href="http://wx.91k8.me/statics/templates/yungou/css/mobile/comm.css?v=20150129" rel="stylesheet" type="text/css" />
+	<link href="http://wx.91k8.me/statics/templates/yungou/css/mobile/goods.css" rel="stylesheet" type="text/css" />
+	<link href="http://wx.91k8.me/statics/templates/yungou/css/mobile/top.css" rel="stylesheet" type="text/css" />
+	<link href="css/new.css" rel="stylesheet" type="text/css" />
+	<script src="http://wx.91k8.me/statics/templates/yungou/js/mobile/jquery190.js" language="javascript" type="text/javascript"></script>
+	<script type="text/javascript" src="http://wx.91k8.me/statics/templates/yungou/js/jquery.cookie.js"></script>
+	<script id="pageJS" data="http://wx.91k8.me/statics/templates/yungou/js/mobile/goodsInfo.js" language="javascript" 	type="text/javascript"></script>
+<style type="text/css">
+.count_zero b{color:#fff;}
+.participation_detail img{
+    width: 40px;
+    height: 40px;
+    margin: 2px 0 0 3px;
+}
+.weui_mask_transparent {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+.share_pop {
+    position: absolute;
+    right: 19px;
+    top: 44px;
+    z-index: 10000;
+    display: none;
+}
+.weui_mask_transparent {
+    position: fixed;
+    z-index: 60;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+/**请选择参与人次弹出框**/
+.choose_people {
+    border-top: 3px solid #F5484C;
+    position: fixed;
+    width: 94%;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 999999;
+    padding: 0% 3% 3%;
+    color: #9c9c9c;
+    text-align: center;
+}
+.choose_people h2{
+    border-bottom: 1px solid #eee;
+    line-height: 40px;
+    text-align: left;
+}
+.surplus {
+    width: 100%;
+    text-align: center;
+    line-height: 12px;
+    height: 30px;
+}
+ins.doudou {
+    color: #F5484C;
+}
+a.confirm_btn {
+    color: #fff;
+    font-size: 16px;
+    width: 100%;
+    background-color: #F5484C;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 10px;
+    display: block;
+}
+.number_various {
+    margin-top: 15px;
+    text-align: center;
+}
+a.reduce {
+    float: left;
+}
+input.person_time {
+    width: 70%;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    height: 28px;
+    text-align: center;
+    margin: 0 auto;
+}
+a.plus {
+    float: right;
+}
+.person_number {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+.person_number ul {
+    width: 100%;
+}
+.person_number li {
+	width:45px;
+    text-align: center;
+    display: inline-block;
+}
+.justify_list{text-align: justify;text-justify:distribute-all-lines;}
+.justify_list:after {width: 100%;height: 0;margin: 0;display: inline-block;overflow: hidden;content: '';}
+a.selected {
+    background-color: #f00;
+    color: #fff;
+    border: none;
+}
+.person_number a {
+    border: 1px solid #ccc;
+    padding: 3px 10px;
+    display: inline-block;
+    border-radius: 5px;
+    width: 23px;
+    color:#999;
+}
+.choose_number {
+    float: left;
+    width: 80%;
+    margin-bottom: 10px;
+    padding: 0 10%;
+}
+.clear{clear: both;}
+.roby-go-buy{
+   height:35px;
+   width:90%;
+   line-height: 35px;
+   border-radius: 5px;
+   color: #fff;
+   font-size:16px;
+   text-align: center;
+   margin: 15px auto 10px;
+   background: #F5484C;
+}
+a.closed_btn {
+    position: absolute;
+    right: 5px;
+    top: -5px;
+    font-size: 29px;
+    display: block;
+    color: #999;
+    font-weight: 400;
+}
+.join_time{
+	float: right;
+}
+a#not_online{
+	top:0;
+	right:0;
+}
+</style>
+</head>
+<script type="text/javascript" >
+	$(function(){
+		$(".share").click(function(){
+			$(".weui_mask_transparent").show();
+			$(".share_pop").show();
+			$("body,html").css({"overflow":"hidden"});
+		});
+		$(".share_pop").click(function(){
+			$(".share_pop").hide();
+			$("body,html").css({"overflow":"visible"});
+		});
+
+		function change_pic(){
+			var imgObj = document.getElementById("not_online");
+			if(imgObj.getAttribute("src",2)=="images/not_online.png"){
+			imgObj.src="images/clicked.png";
+			}else{
+			imgObj.src="images/not_online.png";
+			}
+		}
+	});
+</script>
+<body>
+
+<div class="weui_mask_transparent"></div>
+<!--选择人次-->
+<div class="choose_people" style="display:none;">
+    <h2>请选择参与人次</h2>
+    <div class="number_various">
+        <div class="choose_number">
+            <a class="reduce"><img src="http://wx.91k8.me/statics/templates/yungou/css/images/reduce.png" onclick="Calculation('reduce')"></a>
+            <input type="number" class="person_time" value="" id="person_time"/>
+            <a class="plus"><img src="http://wx.91k8.me/statics/templates/yungou/css/images/plus.png"  onclick="Calculation('plus')"></a>
+        </div>
+        <div id="person_number"  class="person_number">
+            <ul class="justify_list">
+                <li><a id="number_10" href="javascript:void(0);">10</a></li>
+                <li><a id="number_20" href="javascript:void(0);">20</a></li>
+                <li><a id="number_50" href="javascript:void(0);">50</a></li>
+                <li><a id="number_100" href="javascript:void(0);">100</a></li>
+                <li style="margin-right:0;"><a id="number_200" href="javascript:void(0);">200</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="surplus">
+    	<span>您账户当前共有<ins><b id="jq_money"></b></ins>淘豆</span>, 
+    	<a href="http://wx.91k8.me/index.php/mobile/home/userrecharge" style="color:#F5484C;text-decoration: underline;font-size:14px;">去充值</a>
+    </div>
+    <div class="surplus red">该商品最多购买<ins class="degrees">86</ins>次</div>
+	<a href="" class="confirm_btn">确定</a>
+	<a href="" class="closed_btn" onclick="choose_people.style.display='none'">×</a>
+</div>
+<!--END选择人次-->
+<!--限购规则-->
+    <div class="quota_pop" style="display: none;">
+    	<h2>限购规则</h2>
+    	<ul>
+    		<li>1.系统采取随机抽选的方式进行开奖；</li>
+    		<li>2.商品将在限购时间结束后进行开奖；</li>
+    		<li>3.此次限购活动对人数不做限制；</li>
+    		<li>4.本活动最终解释权归惠玩车所有；</li>
+    	</ul>
+    	<a class="quota_confirm" onclick="quota_pop.style.display='none'">确定</a>
+    </div>
+<!--END限购规则-->
+<div class="share_pop"><img src="http://wx.91k8.me/statics/templates/yungou/css/images/introduce.png"></div>
+
+<div class="h5-1yyg-v1" id="loadingPicBlock">
+
+<!-- 栏目页面顶部 -->
+<!-- 内页顶部 -->
+
+
+<header class="header">
+	<!--<h1 class="fl"><span>一元购_一元淘_一元买车_全民夺宝-惠玩车网</span><a style="color:#fff; font-size:16px" href="http://wx.91k8.me/index.php/mobile/mobile">惠玩车</a></h1>-->
+	<div class="n-header-wrap">
+		<div class="backbtn">
+			<a href="javascript:;" onclick="history.go(-1)" class="h-count white">
+			</a>
+		</div>
+				<div class="n-h-tit">
+			<h1 class="header-logo">商品详情</h1>
+		</div>
+		<!--<a href="" class="share"><img src="http://wx.91k8.me/statics/templates/yungou/css/images/share.png"></a>-->
+	</div>
+	<!-- 栏目页面顶部 -->			</header><!-- 内页顶部 -->
+
+    <input name="hidGoodsID" type="hidden" id="hidGoodsID" value="1202"/>   <!--上期获奖者id-->
+    <input name="hidCodeID" type="hidden" id="hidCodeID" value="35"/>     <!--本期商品id-->
+    <section class="goodsCon pCon">
+	    <!-- 导航 -->
+        <div id="divPeriod" class="pNav">
+            <div class="loading"><b></b>正在加载</div>
+    	    <ul class="slides">
+    	       <li class="cur"><a href="javascript:;">第3期</a><b></b></li><li><a href="http://wx.91k8.me/index.php/mobile/mobile/dataserver/27" >第2期</a></li><li><a href="http://wx.91k8.me/index.php/mobile/mobile/dataserver/22" >第1期</a></li>            </ul>
+        </div>
+
+
+        <!-- 产品图 -->
+        <div class="pPic pPicBor">
+            <div style="width:65%;max-height:400px; overflow:hidden;margin:0 auto;">
+                <img src="http://wx.91k8.me/statics/uploads/shopimg/20160906/68603972154883.jpg" style="width:100%;max-height:400px;" class="animClass" />
+                                <img src="http://wx.91k8.me/statics/templates/yungou/css/images/go_on.png" class="go_on">
+                            </div>
+            <!-- roby 08-04 屏蔽轮播图片
+            <div class="pPic2">
+    	        <div id="sliderBox" class="pImg">
+                    <div class="loading"><b></b>正在加载</div>
+                    <ul class="slides">
+					                    </ul>
+                </div>
+            </div>
+            -->
+			        </div>
+
+	        <!-- 条码信息 -->
+	        <div class="pDetails ">
+                <b><ins>(第3期)</ins>普通洗车服务 开呗养车 单次 全国5000多合作服务门店均可使用 <span></span></b>
+                <p class="price">价值：<em class="arial gray">￥46.00</em></p>
+
+							<div class="Progress-bar">
+					<p class="u-progress" title="已完成34.78%">
+						<span class="pgbar" style="width:34.782608695652%;">
+							<span class="pging"></span>
+						</span>
+					</p>
+					<ul class="Pro-bar-li">
+						<!--<li class="P-bar01"><em>16</em>已参与</li>-->
+						<!--<li class="P-bar02"><em>46</em>总需人次</li>
+						<li class="P-bar03"><em class="jq_roby_enable_add">30</em>剩余人次</li>-->
+						<!--待上线-->
+						<li class="P-bar02">许愿人次<em class="red">3989</em></li>
+						<li class="P-bar04"><a id="not_online"></a></li>
+						<!--END待上线-->
+					</ul>
+				</div>
+			<!--<div id="btnBuyBox" class="pBtn" codeid="35">
+				<a href="javascript:;" class="fl buyBtn">立即1元淘</a>
+				<a href="javascript:;" class="fr addBtn">加入购物车</a>
+			</div>-->
+
+            <!--揭晓幸运号码-->
+            </div>
+            <div class="roby-go-buy participation" onclick="go_buy();" attr_goodsid="35" attr_maxnum="30" attr_times="1">立即参与</div>
+        	<div class="roby-go-buy u-btn-w" id="btnComment"><a href="javascript:void(0);" class="z-btn-comment"><s></s>我要留言</a></div>
+	        <!--未上线我要留言-->
+	        <div class="m-comment" style="display:none;">
+	            <div class="u-comment ">
+	                <textarea name="comment" id="comment" rows="3" class="z-comment-txt" placeholder="请输入内容..."></textarea>
+	            </div>
+	            <div class="u-Btn">
+	                <div class="u-Btn-li"><a id="btnCancel" href="javascript:;" class="z-CloseBtn">取 消</a></div>
+	                <div class="u-Btn-li"><a id="btnPublish" href="javascript:;" class="z-DefineBtn">发表留言</a></div>
+	            </div>
+	        </div>
+        	<!-- 揭晓倒计时 -->
+        	<div class=" count_zero">
+	                        揭晓倒计时：<em id="emH"></em> <strong>:</strong><em id="emM"></em><strong>:</strong><em id="emS"></em>
+	            <a class="quota">限购规则</a>
+	        </div>           	
+			
+        <!--进行中未参加夺宝提示参加-->
+        <!--<div class="hint">您还没有参加哦，赶快试一试吧，万一中了呢~</div> -->
+        <div class="hint">温馨提示：心愿值到达一定数值后，客服将上架该商品</div>
+        
+        <!-- 参与记录，商品详细，晒单导航 -->
+        <div class="joinAndGet">
+        	<!--开奖直播-->
+        	<div class="lottery_tomlive">
+        		<div class="participation_detail">			                                     
+                    <img src="http://wx.91k8.me/statics/uploads/touimg/20160810/90875612810352.jpg">
+                    <a class="paly_button"></a>
+                    <div class="takename_date">
+                        <p class="join_name">开奖直播中</p>
+                        <p>2016-10-26</p>
+                    </div>
+                </div>
+                <dl>
+                	<a href="http://wx.91k8.me/index.php/mobile/mobile/buyrecords/35" class="play_video"><b class="fr z-arrow" style="top:21px;"></b>
+                		<em>播放开奖视频</em>
+                	</a>
+                </dl>                
+        	</div>
+    	    <dl>
+				<a href="http://wx.91k8.me/index.php/mobile/mobile/goodsdesc/35"><b class="fr z-arrow"></b>图文详情<em>建议在WIFI环境下使用</em> </a>
+				<a href="http://wx.91k8.me/index.php/mobile/mobile/lottery/22"><b class="fr z-arrow"></b>最新揭晓</a>
+				<a href="http://wx.91k8.me/index.php/mobile/mobile/goodspost/22"><b class="fr z-arrow"></b>晒单分享</a>               
+				<a href="http://wx.91k8.me/index.php/mobile/mobile/buyrecords/35"><b class="fr z-arrow"></b>往期揭晓</a> 
+				<a href="http://wx.91k8.me/index.php/mobile/mobile/goodspost/22">
+					<b class="fr z-arrow"></b>已有<span class="orange arial">2</span>个幸运者晒单
+					<strong class="orange arial">5</strong>条评论
+				</a>
+            </dl>
+        <!--上期获得者-->
+			<div class="luck_code">幸运1元购码：10000042</div>
+ 			<ul id="prevPeriod" class="m-round" codeid="27" uweb="1202">
+                <li class="fl"><s></s>
+                <!-- <img src="http://wx.91k8.me/statics/templates/yungou/images/mobile/loading.gif" src2="http://wx.91k8.me/statics/uploads/"/> -->
+                </li>
+                <li class="fr"><!--<b class="z-arrow"></b>--></li>
+                <li class="getInfo">
+                    <dd>
+                        <em class="blue">(广东省深圳市)</em>
+                    </dd>
+                    <dd>总共1元购：<em class="orange arial">39</em>人次</dd>
+                    
+                    <dd>1元购时间：2016-08-10 16:12:51</dd>
+                    <dd>揭晓时间：2016-08-10 16:15:51</dd>
+                </li>
+            </ul>
+                    </div>
+        <!--所有参与记录-->
+        <div class="participation_record">
+        	<div class="participation_bar">
+	        	<span>所有参与记录</span>
+	        	<div class="participation_more fr">
+					<a href="http://wx.91k8.me/index.php/mobile/mobile/buyrecords/35" class="u-rs-m2">更多&nbsp;&gt;</a>
+	            </div>
+            </div>
+        	<div class="participation_list">
+                <ul>
+                    <li>
+                        <div class="participation_detail">			                                        
+							<img src="http://wx.91k8.me/statics/uploads/photo/member.jpg">
+                            <div class="takename_date">
+                                <p class="join_name">大王让我来巡山</p>
+                                <p class="purchase_number">购买号码:00010001-0001010</p>
+                                <p>(广东省深圳市 IP:113.97.217.67)</p>
+                                <p>2016-10-15 21:52:14</p>
+                            </div>
+                        </div>
+                        <div class="ren_number">参与<ins style="color:#F5484C;">1</ins>人次</div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="participation_detail">
+							<img src="http://wx.qlogo.cn/mmopen/sFzQTE9YXicBMcWibyAlLrZYz8LaY4GcIu6Wl8A6bCXn0v0Ztv53vabYa0h1ld82UKkdz9MJnlWiaAm6w0XrMicPfDPDHfZck5Sk/0">
+                            <div class="takename_date">
+                                <p class="join_name">小泳</p>
+                                <p class="purchase_number">购买号码:00010001-0001010</p>
+                                <p>(广东省深圳市 IP:113.97.217.67)</p>
+                                <p>2016-09-01 19:43:57</p>
+                            </div>
+                        </div>
+                        <div class="ren_number">
+                            	参与<ins style="color:#F5484C;">1</ins>人次
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="participation_detail">
+							<img src="http://wx.qlogo.cn/mmopen/sFzQTE9YXicBMcWibyAlLrZYz8LaY4GcIu6Wl8A6bCXn0v0Ztv53vabYa0h1ld82UKkdz9MJnlWiaAm6w0XrMicPfDPDHfZck5Sk/0">
+                            <div class="takename_date">
+                                <p class="join_name">小泳</p>
+                                <p class="purchase_number">购买号码:00010001-0001010</p>
+                                <p>(广东省深圳市 IP:113.97.217.67)</p>
+                                <p>2016-09-01 19:42:07</p>
+                            </div>
+                        </div>
+                        <div class="ren_number">
+                            	参与<ins style="color:#F5484C;">1</ins>人次
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="participation_detail">
+							<img src="http://wx.qlogo.cn/mmopen/vPjficwtgTJAF4VBSjeBsibibEYqcY4tXCzJBk7uTqgv34mtbgrxPNMInQJ0GOEqBW3CIbKWWggAwOfz3o6YBdFMeB52PryuXjc/0">
+                            <div class="takename_date">
+                                <p class="join_name">小泳</p>
+                                <p class="purchase_number">购买号码:00010001-0001010</p>
+                                <p>(广东省深圳市 IP:113.97.217.67)</p>
+                                <p>2016-09-01 10:43:49</p>
+                            </div>
+                        </div>
+                        <div class="ren_number">
+                            	参与<ins style="color:#F5484C;">1</ins>人次
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="participation_detail">
+                            <img src="http://wx.91k8.me/statics/uploads/touimg/20160810/90875612810352.jpg">
+                            <div class="takename_date">
+                                <p class="join_name">小泳</p>
+                                <p class="purchase_number">购买号码:00010001-0001010</p>
+                                <p>(广东省深圳市 IP:113.97.217.67)</p>
+                                <p>2016-08-15 18:22:50</p>
+                            </div>
+                        </div>
+                        <div class="ren_number">
+                            	参与<ins style="color:#F5484C;">1</ins>人次
+                        </div>
+                    </li>
+                </ul>           
+        	</div>
+            <div class="clear"></div>           
+        </div>
+		<!--所有留言-->
+        <div class="participation_record">
+        	<div class="participation_bar">
+	        	<span>留言</span>
+	        	<div class="participation_more fr">
+					<a href="http://wx.91k8.me/index.php/mobile/mobile/buyrecords/35" class="u-rs-m2">全部&nbsp;&gt;</a>
+	            </div>
+            </div>
+        	<div class="participation_list">
+                <ul>
+                    <li>
+                        <div class="participation_detail">
+                            <img src="http://wx.91k8.me/statics/uploads/photo/member.jpg">
+                            <div class="takename_date">
+                                <p class="join_name fleft">大王让我</p>
+                                <p class="join_time">2016-09-26 14:48:21</p>
+                                <div class="leave_essage">好喜欢，好喜欢，我好想要好喜欢，大家一起关注吧！好喜欢，好喜欢，我好想要好喜欢，大家一起关注吧！</div>                               
+                            </div> 
+                        </div> 
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="participation_detail">
+							<img src="http://wx.qlogo.cn/mmopen/sFzQTE9YXicBMcWibyAlLrZYz8LaY4GcIu6Wl8A6bCXn0v0Ztv53vabYa0h1ld82UKkdz9MJnlWiaAm6w0XrMicPfDPDHfZck5Sk/0">
+                            <div class="takename_date">
+                                <p class="join_name fleft">可爱萌萌 </p>
+                                <p class="join_time">2016-09-01 19:43:57</p>
+                                <div class="leave_essage">好喜欢，好喜欢，我好想要好喜欢，大家一起关注吧！</div>                                
+                            </div>
+                       </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div class="participation_detail">			                                                                    
+                            <img src="http://wx.qlogo.cn/mmopen/sFzQTE9YXicBMcWibyAlLrZYz8LaY4GcIu6Wl8A6bCXn0v0Ztv53vabYa0h1ld82UKkdz9MJnlWiaAm6w0XrMicPfDPDHfZck5Sk/0">
+                            <div class="takename_date">
+                                <p class="join_name fleft">可爱萌萌</p>
+                                <p class="join_time">2016-09-01 19:42:07</p>
+                                <div class="leave_essage">好喜欢，好喜欢，我好想要好喜欢，大家一起关注吧！</div>                               
+                            </div>
+                        </div>
+                    </li>
+                </ul>          
+        	</div>
+            <div class="clear"></div>           
+        </div>
+    </section>
+
+﻿<footer class="footer">
+    <p>&nbsp;</p>
+	<p class="grayc">客服热线<span class="orange"><a href="tel:400-805-0095">400-805-0095</a>   </span></p>
+	<!--<p class="grayc">www.91k8.me</p>-->
+	<a id="btnTop" href="javascript:;" class="z-top" style="display:none;">
+		<!-- <b class="z-arrow"></b> --><img src="http://wx.91k8.me/statics/templates/yungou/css/images/stick01.png">
+	</a>
+	<a id="shopping_cart" href="http://wx.91k8.me/index.php/mobile/cart/cartlist" class="z-shoppingcart">
+		<img src="http://wx.91k8.me/statics/templates/yungou/css/images/shopping_cart01.png">
+		<ins></ins>
+	</a>
+</footer>
+
+<div class="footerdi" style="bottom: 0px;">
+	<ul>
+		<li class="f_home">
+			<a title="首页" href="index.html"><i class="">&nbsp;</i>首页</a>
+		</li>
+		<!--<li class="f_whole">
+			<a title="所有商品" href="http://wx.91k8.me/index.php/mobile/mobile/glist"><i class="">&nbsp;</i>所有商品</a>
+		</li>-->
+		<li class="f_jiexiao">
+			<a title="即将揭晓" href="announce_soon.html"><i class="">&nbsp;</i>即将揭晓</a>
+		</li>
+		<li class="f_car">
+			<a title="购物车" href="http://wx.91k8.me/index.php/mobile/cart/cartlist"><i class="">&nbsp;</i>购物车</a>
+		</li>
+		<li class="f_personal">
+			<a title="我的云购" href="my_personage.html"><i class="">&nbsp;</i>个人中心</a>
+		<li>
+	</ul>
+</div>
+
+<script>
+    var init_step = 5;
+    var person_enable =   0;                          //个人能够购买的数量
+    var goods_enable = 120;                           //商品能够购买的数量
+    var goods_id = '';
+
+
+    function go_buy()
+    {
+        //alert('12321');
+    }
+
+    $(document).ready(function(){
+        // update 08-23
+        $.getJSON('http://wx.91k8.me/index.php/mobile/ajax/cartnum',function(data){
+            $("#btnCart").append('<em>'+data.num+'</em>');
+            if(data.num > 0){
+                $('#shopping_cart ins').html(data.num);
+            }
+
+        });
+        $('#person_time').focus(function(){
+            var v = $(this).val();
+            var w = /^[1-9]{1}\d{0,6}$/;
+            if (!w.test(v)) {
+                alert('只能输正整数哦');
+            }
+        })
+        /**参与弹出选择人次**/
+        var showcart = ('.participation');
+        $(document).on('click',showcart,function(){
+
+            if($(this).hasClass('canyudis')){
+                return false;
+            }
+            var default_times = $(this).attr('attr_times');
+            goods_enable = $(this).attr('attr_maxnum');
+            goods_id = $(this).attr('attr_goodsid');
+            $(".choose_people").show();
+            $(".weui_mask_transparent").show();
+            $('#jq_money').html('0');
+            if(default_times>0){
+                $('.person_time').val(default_times);
+            }else{
+                $('.person_time').val(1);
+            }
+        });
+
+
+
+        $('.person_time').blur(function(){
+            var obj = $(this);
+            var this_num = parseInt(obj.val());
+            /*
+            if(person_enable >0 && this_num>person_enable){
+                alert('您的淘币最多购买'+person_enable+'次');
+                $("#person_time").val(person_enable);
+                return false;
+            }
+            */
+            if(this_num>goods_enable){
+                alert('该商品最多能购买'+goods_enable+'次');
+                $("#person_time").val(goods_enable);
+                return false;
+            }
+
+
+        })
+        $("#person_number a").click(function(){
+            var obj = $(this);
+            var this_num = parseInt(obj.html());
+            /*
+            if(person_enable >0 && this_num>person_enable){
+                alert('您的淘币最多购买'+person_enable+'次');
+                $("#person_time").val(person_enable);
+                return false;
+            }
+            */
+            if(this_num>goods_enable){
+                alert('该商品最多能购买'+goods_enable+'次');
+                $("#person_time").val(goods_enable);
+                return false;
+            }
+            $("#person_number a").removeClass("selected");
+            obj.addClass("selected");
+            $("#person_time").val(this_num);
+        })
+        //提交直接购物
+        $(".confirm_btn").click(function(){
+            //$(".weui_mask_transparent").hide();
+            var num = $('#person_time').val();
+            console.log(goods_id+'>'+num);
+            if(num>0){
+                $.getJSON('http://wx.91k8.me/index.php/mobile/ajax/addShopCart/'+goods_id+'/'+num,function(data){
+                    if(data.code==1){
+                        addsuccess('添加失败');
+                    }else if(data.code==0){
+                        addsuccess('添加成功');
+                        //location.href="http://wx.91k8.me/index.php/mobile/cart/cartlist";
+                    }
+                });
+                return false;
+            }else{
+                alert('请添加数量');
+            }
+
+        });
+        function addsuccess(dat){
+            $('.choose_people').hide();
+            $('.weui_mask_transparent').css('display','none');
+            $("#pageDialogBG .Prompt").text("");
+            var w=($(window).width()-255)/2,
+                    h=($(window).height()-45)/2;
+            $("#pageDialogBG").css({top:h,left:w,opacity:0.8});
+            $("#pageDialogBG").stop().fadeIn(1000);
+            $("#pageDialogBG .Prompt").append('<s></s>'+dat);
+            $("#pageDialogBG").fadeOut(1000);
+            //购物车数量
+            $.getJSON('http://wx.91k8.me/index.php/mobile/ajax/cartnum',function(data){
+                $("#btnCart").append('<em>'+data.num+'</em>');
+                if(data.num > 0){
+                    $('#shopping_cart ins').html(data.num);
+                }
+            });
+        }
+
+
+    })
+    //点击加减方法
+    function Calculation(obj){
+        var old_num = parseInt($("#person_time").val());    //当前购买次数
+        if(obj =="reduce"){         //减
+            if(old_num>init_step){
+                $("#person_time").val(old_num-init_step);
+            }else{
+                alert('亲，不能再减了');
+                return false;
+            }
+        }else if(obj =="plus"){
+            var now_num = old_num + init_step;
+            /*
+            if(person_enable>0 && now_num>person_enable){
+                alert('您的淘币最多购买'+person_enable+'次');
+                return false;
+            }
+            */
+            if(now_num>goods_enable){
+                alert('该商品最多能购买'+goods_enable+'次');
+                return false;
+            }
+            $("#person_time").val(now_num);
+        }
+    }
+    //点击数字方法
+    function selected(id){
+        $("#person_number a").each(function(){
+            $(this).removeClass("selected");
+            if($(this).attr("id") == id ){
+                $(this).addClass("selected");
+                $("#person_time").val($(this).text());
+            }
+        });
+    }
+    /**进行中最新揭晓倒计时**/
+	function fresh() {
+            var d = "2016-10-8";
+            var endtime = new Date(d);
+            var nowtime = new Date();
+            var leftsecond = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
+            d = parseInt(leftsecond / 3600 / 24);
+            h = parseInt((leftsecond / 3600) % 24);
+            m = parseInt((leftsecond / 60) % 60);
+            s = parseInt(leftsecond % 60);
+            var td = d * 24 + h;
+            if(td<10){
+         		td="0"+td
+         	}
+            if(m<10){
+         		m="0"+m
+         	}
+            if(s<10){
+         		s="0"+s
+         	}
+            $("#emH").html(td);
+            $("#emM").html(m);
+            $("#emS").html(s);
+            if (leftsecond <= 0) {
+                    $("#emH").html("00");
+                    $("#emM").html("00");
+                    $("#emS").html("00");
+                clearInterval(sh);
+            }
+        }
+        fresh();
+        var sh;
+        sh = setInterval(fresh, 1000);
+        
+		//我要留言
+		$("#btnComment").click(function(){
+			$(".m-comment").show();
+		});
+		$("#btnCancel").click(function(){
+			$(".m-comment").hide();	
+		});
+		
+		//限购规则弹出框
+		$(".quota").click(function(){
+			$(".quota_pop").show();
+			$(".weui_mask_transparent").show();
+       		var winH = $(window).height();
+		    var winW = $(window).width();
+		    $(".quota_pop").css({'top': winH/2-$(".quota_pop").height()/2,'left': winW/2-$(".quota_pop").width()/2 });
+	        	$(".quota_pop").slideDown(800, function() {
+	        	setTimeout("ClearIndexHeadPopup()", '3000');
+	        	$("body,html").css({"overflow":"hidden"});
+	        });
+       		$(".weui_mask_transparent, .quota_confirm").click(function(){
+		            $(".quota_pop").hide();
+		            $(".weui_mask_transparent").hide();
+		            $("body,html").css({"overflow":"visible"}); 
+		        });
+		});
+</script>
+<script language="javascript" type="text/javascript">
+  var Path = new Object();
+  Path.Skin="http://wx.91k8.me/statics/templates/yungou";
+  Path.Webpath = "http://wx.91k8.me/index.php";
+
+var Base = {
+    head: document.getElementsByTagName("head")[0] || document.documentElement,
+    Myload: function(B, A) {
+        this.done = false;
+        B.onload = B.onreadystatechange = function() {
+            if (!this.done && (!this.readyState || this.readyState === "loaded" || this.readyState === "complete")) {
+                this.done = true;
+                A();
+                B.onload = B.onreadystatechange = null;
+                if (this.head && B.parentNode) {
+                    this.head.removeChild(B)
+                }
+            }
+        }
+    },
+    getScript: function(A, C) {
+        var B = function() {};
+        if (C != undefined) {
+            B = C
+        }
+        var D = document.createElement("script");
+        D.setAttribute("language", "javascript");
+        D.setAttribute("type", "text/javascript");
+        D.setAttribute("src", A);
+        this.head.appendChild(D);
+        this.Myload(D, B)
+    },
+    getStyle: function(A, B) {
+        var B = function() {};
+        if (callBack != undefined) {
+            B = callBack
+        }
+        var C = document.createElement("link");
+        C.setAttribute("type", "text/css");
+        C.setAttribute("rel", "stylesheet");
+        C.setAttribute("href", A);
+        this.head.appendChild(C);
+        this.Myload(C, B)
+    }
+}
+function GetVerNum() {
+    var D = new Date();
+    return D.getFullYear().toString().substring(2, 4) + '.' + (D.getMonth() + 1) + '.' + D.getDate() + '.' + D.getHours() + '.' + (D.getMinutes() < 10 ? '0': D.getMinutes().toString().substring(0, 1))
+}
+Base.getScript('http://wx.91k8.me/statics/templates/yungou/js/mobile/Bottom.js');
+
+
+</script>
+<script>
+$(function(){
+	  $(".blue").click(function(){
+	 window.location.href="http://wx.91k8.me/index.php/mobile/mobile/userindex/1202";
+  });
+
+  $(".orange.arial").click(function(){
+	 window.location.href="http://wx.91k8.me/index.php/mobile/mobile/dataserver/27";
+  });
+  
+	// 揭晓倒计时
+	var divLotteryTime = $('#divLotteryTime');
+	if ( divLotteryTime.size() > 0 ) {
+		var id = divLotteryTime.attr('data-id');
+		var minute = divLotteryTime.find('b.minute');
+		var second = divLotteryTime.find('b.second');
+		var millisecond = divLotteryTime.find('b.millisecond');
+		var tips = minute.parent().prev();
+		var times = (new Date().getTime()) + 1000 * divLotteryTime.attr('data-endtime');
+		var timer = setInterval(function(){
+			var time = times - (new Date().getTime());
+			if ( time < 1 ) {
+				clearInterval(timer);
+				tips.css('line-height', '35px').css('color','#F60').html('刷新下，幸运者就是你！');
+				minute.parent().remove();
+				second.parent().remove();
+				millisecond.parent().remove();
+                location.reload();          //roby 08-23 刷新
+
+				var checker = function(){
+					$.getJSON(Gobal.Webpath+"/api/getshop/lottery_shop_huode/"+new Date().getTime(),{'test':true,'gid':id},function(info){
+						if ( info.error ) {
+							tips.html('刷新下，幸运者就是你');
+							setTimeout(checker,1000);
+						} else {
+							tips.html('揭晓成功！');
+							setTimeout(function(){
+								location.reload();
+							},200);
+						}
+					});
+				};
+				setTimeout(checker,750);
+				return;
+			}
+
+			i =  parseInt((time/1000)/60);
+			s =  parseInt((time/1000)%60);
+			ms =  String(Math.floor(time%1000));
+			ms = parseInt(ms.substr(0,2));
+			if(i<10)i='0'+i;
+			if(s<10)s='0'+s;
+			if(ms<10)ms='0'+ms;
+			minute.html(i);
+			second.html(s);
+			millisecond.html(ms);
+		}, 41);
+
+	}
+	
+})
+
+</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,935 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>一元购_一元淘_一元买车_全民夺宝-惠玩车网</title>
+    <meta content="app-id=518966501" name="apple-itunes-app" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0"/>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <link href="http://wx.91k8.me/statics/templates/yungou/images/mobile/touch-icon.png" rel="apple-touch-icon-precomposed" />
+    <link href="favicon.ico" rel="shortcut icon" />
+    <link href="http://wx.91k8.me/statics/templates/yungou/css/mobile/comm.css" rel="stylesheet" type="text/css" />
+    <link href="http://wx.91k8.me/statics/templates/yungou/css/mobile/index.css" rel="stylesheet" type="text/css" />
+    <script src="http://wx.91k8.me/statics/templates/yungou/js/mobile/jquery190.js" language="javascript" type="text/javascript"></script>
+    <script id="pageJS" data="http://wx.91k8.me/statics/templates/yungou/js/mobile/Index.js" language="javascript" type="text/javascript"></script>
+    <link rel="stylesheet" href="http://wx.91k8.me/statics/templates/yungou/css/mobile/top.css">
+    <link rel="stylesheet" href="http://wx.91k8.me/statics/templates/yungou/js/mobile/swiper/css/swiper.min.css">
+	<link href="css/new.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+	// 单行新闻文字滚动
+	function b(){	
+		t = parseInt(x.css('top'));
+		y.css('top','19px');	
+		x.animate({top: t - 19 + 'px'},'slow');	//19为每个li的高度
+		if(Math.abs(t) == h - 19){ //19为每个li的高度
+			y.animate({top:'0px'},'slow');
+			z=x;
+			x=y;
+			y=z;
+		}
+		setTimeout(b,1000);//滚动间隔时间 现在是3秒
+	}
+	$(document).ready(function(){
+		$('.swap').html($('.news_li').html());
+		x = $('.news_li');
+		//return false;
+		y = $('.swap');
+		h = $('.news_li li').length * 19; //19为每个li的高度
+		setTimeout(b,1000);//滚动间隔时间 现在是3秒
+		
+	})
+	
+	//恭喜您获得淘豆积分
+    $(function(){     
+    	var isNewRegister = 0 ;
+    	show_or_hide(isNewRegister);
+    	function show_or_hide(isNewRegister){
+    		$(".weui_mask_transparent").hide();
+    		if(isNewRegister =="1"){
+    			/*$("body").addClass("weui_mask_transparent");*/
+				$(".weui_mask_transparent").show();
+					var winH = $(window).height();
+	            	var winW = $(window).width();       
+	            	$("#indexheadpopup").css({'top': winH/2-$("#indexheadpopup").height()/1.2,'left': winW/2-$("#indexheadpopup").width()/2 });
+	                $("#indexheadpopup").slideDown(800, function() {
+	            	$("body,html").css({"overflow":"hidden"});
+	       		});
+		        $(".weui_mask_transparent, .affirm").click(function(){
+		            $("#indexheadpopup").hide();
+		            $(".weui_mask_transparent").hide();
+		            $("body,html").css({"overflow":"visible"}); 
+		        });
+			}
+    	}
+    	
+
+    });
+	/**最新揭晓倒计时**/
+	function fresh() {
+            var d = "2016-10-28";
+            var endtime = new Date(d);
+            var nowtime = new Date();
+            var leftsecond = parseInt((endtime.getTime() - nowtime.getTime()) / 1000);
+            d = parseInt(leftsecond / 3600 / 24);
+            h = parseInt((leftsecond / 3600) % 24);
+            m = parseInt((leftsecond / 60) % 60);
+            s = parseInt(leftsecond % 60);
+            var td = d * 24 + h;
+            if(td<10){
+         		td="0"+td
+         	}
+            if(m<10){
+         		m="0"+m
+         	}
+            if(s<10){
+         		s="0"+s
+         	}
+            $("#emH").html(td);
+            $("#emM").html(m);
+            $("#emS").html(s);
+		    if (leftsecond <= 0) {
+                    $("#emH").html("00");
+                    $("#emM").html("00");
+                    $("#emS").html("00");
+                clearInterval(sh);
+         } 
+        }
+        fresh();
+        var sh;
+        sh = setInterval(fresh, 1000);
+    </script>
+
+</head>
+<body>
+<!--恭喜你弹出框-->
+<div class="weui_mask_transparent"></div>
+<div id="indexheadpopup">
+    <a href="javascript:;" class="affirm" onclick="indexheadpopup.style.display='none'"><img src="http://wx.91k8.me/statics/templates/yungou/css/images/sure_btn.png"></a>
+    <img src="http://wx.91k8.me/statics/templates/yungou/css/images/pop_bg.png" class="pop_bg">
+</div>
+<!--END恭喜你弹出框-->
+
+<!--选择人次-->
+<div class="choose_people" style="display:none;">
+	<h2>请选择参与人次</h2>
+	<div class="number_various">
+		<div class="choose_number">
+			<a class="reduce" href="javascript:void(0);"><img src="http://wx.91k8.me/statics/templates/yungou/css/images/reduce.png" onclick="Calculation('reduce')"></a>
+			<input type="number" class="person_time" value="" id="person_time"/>
+			<a class="plus" href="javascript:void(0);"><img src="http://wx.91k8.me/statics/templates/yungou/css/images/plus.png"  onclick="Calculation('plus')"></a>
+		</div>
+		<div id="person_number"  class="person_number">
+			<ul class="justify_list">
+				<li><a id="number_10" href="javascript:void(0);">+10</a></li>
+				<li><a id="number_20" href="javascript:void(0);">+20</a></li>
+				<li><a id="number_50" href="javascript:void(0);">+50</a></li>
+				<li><a id="number_100" href="javascript:void(0);">+100</a></li>
+				<li style="margin-right:0;"><a id="number_200" href="javascript:void(0);">+200</a></li>				
+			</ul>
+			<p class="fast_add">(可快速增加参与人次)</p>
+		</div>
+	</div>
+	<div class="surplus"><span>您账户当前共有<ins><b id="jq_money"></b></ins>元宝</span>, <a href="http://wx.91k8.me/index.php/mobile/home/userrecharge" style="color:#F5484C;text-decoration: underline;font-size:14px;">去充值</a></div>
+	<div class="surplus red">该商品最多购买<ins class="degrees">86</ins>次</div>
+	<a href="" class="confirm_btn">确定</a>
+	<a href="" class="closed_btn" onclick="choose_people.style.display='none'">×</a>
+</div>
+<!--END选择人次-->
+
+<div class="h5-1yyg-v1" id="loadingPicBlock">
+    <header class="header">
+        <div class="n-header-wrap">
+            <div class="backbtn">
+            </div>
+		<div class="n-h-tit"><!--<h1 class="header-logo">首页</h1>--><span class="system_name">全民惠玩车</span></div>
+        </div>
+    </header>
+
+    <!-- 内页顶部 -->
+
+    <input name="hidStartAt" type="hidden" id="hidStartAt" value="0" />
+    <!-- 焦点图 -->
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            
+                <div class="swiper-slide">
+                    <a href="http://wx.91k8.me/index.php/mobile/mobile/item/1" target="_blank"><img style="width: 100%;"  src="http://wx.91k8.me/statics/uploads/banner/20160810/76591121827973.jpg"></a>
+                </div>
+
+                
+                <div class="swiper-slide">
+                    <a href="http://wx.91k8.me/index.php/mobile/mobile/item/31" target="_blank"><img style="width: 100%;"  src="http://wx.91k8.me/statics/uploads/banner/20160810/34445943828024.jpg"></a>
+                </div>
+
+                
+                <div class="swiper-slide">
+                    <a href="http://wx.91k8.me/index.php/mobile/mobile/glist" target="_blank"><img style="width: 100%;"  src="http://wx.91k8.me/statics/uploads/banner/20160810/43586583828039.jpg"></a>
+                </div>
+             
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="http://wx.91k8.me/statics/templates/yungou/js/mobile/swiper/js/swiper.min.js" language="javascript" type="text/javascript"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true
+        });
+    </script>
+	<div class="sort_management">
+		<ul>
+			<li><a href="product_classify.html">
+				<img src="images/food.png"><ins>HOT</ins><p>爱心食品</p></a>
+			</li>
+			<li><a href="product_classify.html">
+				<img src="images/clothing.png"><p>服装饰品</p></a>
+			</li>
+			<li><a href="product_classify.html">
+				<img src="images/home_furnishing.png"><p>家居用品</p></a>
+			</li>
+			<li><a href="product_classify.html">
+				<img src="images/toy.png"><p>玩具宠物</p></a>
+			</li>
+			<li><a href="http://wx.91k8.me/index.php/mobile/home/userrecharge">
+				<img src="images/coin_jamming.png"><p>虚拟卡币</p></a>
+			</li>
+			<li><a href="http://wx.91k8.me/index.php/mobile/mobile/lottery">
+				<img src="images/household_appliances.png"><p>数码家电</p></a>
+			</li>
+			<li><a href="http://wx.91k8.me/index.php/mobile/shaidan/index">
+				<img src="images/luxury_car.png"><p>豪华汽车</p></a>
+			</li>
+			<li><a href="http://wx.91k8.me/index.php/mobile/mobile/help">
+				<img src="images/arts_sports.png"><p>文艺体育</p></a>
+			</li>
+		</ul>
+	</div>
+	<div class="benefit" style="background-color:#fff;">
+		<div class="box">
+			<div class="t_news">
+				<ul class="news_li">
+                    <li><a href="http://wx.91k8.me/index.php/mobile/mobile/item/26">恭喜<b style="color">光辉岁月</b>获得价值109.00元的中国石油 100元 无记名加油卡 2000多座加油站 30省市联网使用</a></li>
+                                               
+                    <li><a href="http://wx.91k8.me/index.php/mobile/mobile/item/27">恭喜<b style="color"></b>获得价值46.00元的开呗养车 普通洗车服务 单次&nbsp;全国5000多合作服务门店均可使用</a></li>
+                                                
+                    <li><a href="http://wx.91k8.me/index.php/mobile/mobile/item/22">恭喜<b style="color">光辉岁月</b>获得价值46.00元的开呗养车 普通洗车服务 单次 全国5000多合作服务门店均可使用</a></li>
+                                                
+                    <li><a href="http://wx.91k8.me/index.php/mobile/mobile/item/17">恭喜<b style="color">先中个加油卡再说</b>获得价值109.00元的中国石油 100元 无记名加油卡 2000多坐加油站 30省市联网使用</a></li>                                                                   
+				</ul>
+				<ul class="swap"></ul>
+			</div>
+		</div>
+	</div>
+    <!--<div class="textnav">-->
+    <!--</div>-->
+    <!--即将揭晓 -->
+    <section class="g-main">
+        <div class="m-tt1">
+            <h2 class="fl"><a href="http://wx.91k8.me/index.php/mobile/mobile/rexiao">即将揭晓</a></h2>
+            <div class="fl z-tips"><!-- 每天10点、15点、22点热门揭晓 --></div>
+            <div class="fr u-more">
+                <a href="announce_soon.html" class="u-rs-m2"><b class="z-arrow"></b>更多</a>
+            </div>
+        </div>
+        <article class="h5-1yyg-w310 m-round m-lott-li" id="divLottery">
+            <!--roby 08-26
+            <ul class="clearfix"></ul>
+            -->
+            <ul class="clearfix">
+                <li>
+                    <a href="http://wx.91k8.me/index.php/mobile/mobile/item/29" class="u-lott-pic">
+                        <img src="http://wx.91k8.me/statics/templates/yungou/images/loading.jpg" src2="http://wx.91k8.me/statics/uploads/shopimg/20160902/81881211782697.jpg" border="0" alt="" />
+                    </a>
+			        <div class="count_down">
+			            <em id="emH"></em> <strong>:</strong><em id="emM"></em><strong>:</strong><em id="emS"></em>
+			        </div>
+					<div class="announce_name">
+                        <a href="activity_detail.html" class="blue z-user">100元充值优惠卡</a>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="http://wx.91k8.me/index.php/mobile/mobile/item/25" class="u-lott-pic">
+                        <img src="http://wx.91k8.me/statics/templates/yungou/images/loading.jpg" src2="http://wx.91k8.me/statics/uploads/shopimg/20160902/32004472783190.jpg" border="0" alt="" />
+                    </a>
+                    <div class="count_down">
+			            <em id="emH"></em> <strong>:</strong><em id="emM"></em><strong>:</strong><em id="emS"></em>
+			        </div>
+					<div class="announce_name">
+                        <a href="http://wx.91k8.me/index.php/mobile/mobile/userindex/" class="blue z-user">iphone7亮黑色</a>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="http://wx.91k8.me/index.php/mobile/mobile/item/1" class="u-lott-pic">
+                        <img src="http://wx.91k8.me/statics/templates/yungou/images/loading.jpg" src2="http://wx.91k8.me/statics/uploads/shopimg/20160902/81092155782265.jpg" border="0" alt="" />
+                    </a>
+                    <div class="count_down">
+			            <em id="emH"></em> <strong>:</strong><em id="emM"></em><strong>:</strong><em id="emS"></em>
+			        </div>
+					<div class="announce_name">
+                        <a href="http://wx.91k8.me/index.php/mobile/mobile/userindex/" class="blue z-user">iphone6s玫瑰金</a>
+                    </div>
+                </li>
+        </ul>
+        </article>
+    </section>
+    <!-- 热门商品-->
+    <section class="g-main">
+        <div class="m-tt1">
+            <h2 class="fl"><a href="http://wx.91k8.me/index.php/mobile/mobile/glist?cateid=149">热门商品</a></h2>
+            <div class="fl z-tips"><!-- 每天10点、15点、22点热门揭晓 --></div>
+            <div class="fr u-more">
+                <a href="http://wx.91k8.me/index.php/mobile/mobile/glist?cateid=149" class="u-rs-m2"><b class="z-arrow"></b>更多</a>
+            </div>
+        </div>
+        <article class="clearfix h5-1yyg-w310 m-round m-tj-li">
+            <ul id="ulRecommend">
+                <li id="31">
+                    <div class="f_bor_tr">
+                        <div class="m-tj-pic">
+                            <a href="http://wx.91k8.me/index.php/mobile/mobile/item/31" class="u-lott-pic">
+                                <img src="http://wx.91k8.me/statics/templates/yungou/images/loading.jpg" src2="http://wx.91k8.me/statics/uploads/shopimg/20160902/68730563782583.jpg" border=0 alt="" />
+                            </a>
+                            <ins class="u-promo">价值:￥99999.00</ins>
+                        </div>
+                        <div class="brand_introduce">
+                            <a href="http://wx.91k8.me/index.php/mobile/mobile/item/31">大众汽车 New Polo 2016新款 1.4L 自动风尚版 乐趣自我 玩得漂亮</a>
+                        </div>
+                        <div class="Progress-bar">
+                        	<div class="proportion">
+	                            <p class="u-progress" title="已完成0.05%">
+									<span class="pgbar" style="width:0.0520005200052%;">
+									<span class="pging"></span>
+									</span>
+	                            </p>
+	                            <ul class="Pro-bar-li">
+	                                <!--<li class="P-bar01"><em>52</em>已参与</li>-->
+	                                <li class="P-bar02"><em>99999</em>总需人次</li>
+	                                <li class="P-bar03"><em>99947</em>剩余人次</li>
+	                            </ul>
+                           </div>
+                        </div>
+                        <div class="take_part_in">
+                            <a href="javascript:void(0);" class="participation" attr_goodsid="31" attr_maxnum="99947" attr_times="1">参与</a>
+                        </div>
+                    </div>
+                </li>
+                <li id="30">
+                    <div class="f_bor_tr">
+                        <div class="m-tj-pic">
+                            <a href="http://wx.91k8.me/index.php/mobile/mobile/item/30" class="u-lott-pic">
+                                <img src="http://wx.91k8.me/statics/templates/yungou/images/loading.jpg" src2="http://wx.91k8.me/statics/uploads/shopimg/20160902/68682040783355.jpg" border=0 alt="" />
+                            </a>
+                            <ins class="u-promo">价值:￥108888.00</ins>
+                        </div>
+                        <div class="brand_introduce">
+                            <a href="http://wx.91k8.me/index.php/mobile/mobile/item/30"> 标致汽车 301家轿 2016新款 1.6L 配置丰富 浪漫家轿 </a>
+                        </div>
+                        <div class="Progress-bar">
+                        	<div class="proportion">
+	                            <p class="u-progress" title="已完成0.01%">
+									<span class="pgbar" style="width:0.012857247814268%;">
+									<span class="pging"></span>
+									</span>
+	                            </p>
+	                            <ul class="Pro-bar-li">
+	                                <!--<li class="P-bar01"><em>14</em>已参与</li>-->
+	                                <li class="P-bar02"><em>108888</em>总需人次</li>
+	                                <li class="P-bar03"><em>108874</em>剩余人次</li>
+	                            </ul>
+                           </div>
+                        </div>
+                        <div class="take_part_in">
+                            <a href="javascript:void(0);" class="participation" attr_goodsid="30" attr_maxnum="108874" attr_times="1">参与</a>
+                        </div>
+                    </div>
+                </li>
+                <li id="36">
+                    <div class="f_bor_tr">
+                        <div class="m-tj-pic">
+                            <a href="http://wx.91k8.me/index.php/mobile/mobile/item/36" class="u-lott-pic">
+                                <img src="http://wx.91k8.me/statics/templates/yungou/images/loading.jpg" src2="http://wx.91k8.me/statics/uploads/shopimg/20160730/33155059848576.jpg" border=0 alt="" />
+                            </a>
+                            <ins class="u-promo">价值:￥109.00</ins>
+                        </div>
+                        <div class="brand_introduce">
+                            <a href="http://wx.91k8.me/index.php/mobile/mobile/item/36">中石化加油卡 100元 无记名加油卡 2000多座加油站 30省市联网使用</a>
+                        </div>
+                        <div class="Progress-bar">
+                        	<div class="proportion">
+	                            <p class="u-progress" title="已完成21.10%">
+									<span class="pgbar" style="width:21.100917431193%;">
+									<span class="pging"></span>
+									</span>
+	                            </p>
+	                            <ul class="Pro-bar-li">
+	                                <!--<li class="P-bar01"><em>23</em>已参与</li>-->
+	                                <li class="P-bar02"><em>109</em>总需人次</li>
+	                                <li class="P-bar03"><em>86</em>剩余人次</li>
+	                            </ul>
+                           </div>
+                        </div>
+                        <div class="take_part_in">
+                            <a href="javascript:void(0);" class="participation" attr_goodsid="36" attr_maxnum="86" attr_times="1">参与</a>
+                        </div>
+                    </div>
+                </li>
+                <li id="18">
+                    <div class="f_bor_tr">
+                        <div class="m-tj-pic">
+                            <a href="http://wx.91k8.me/index.php/mobile/mobile/item/18" class="u-lott-pic">
+                                <img src="http://wx.91k8.me/statics/templates/yungou/images/loading.jpg" src2="http://wx.91k8.me/statics/uploads/shopimg/20160730/58223467848792.jpg" border=0 alt="" />
+                            </a>
+                            <ins class="u-promo">价值:￥549.00</ins>
+                        </div>
+                        <div class="brand_introduce">
+                            <a href="http://wx.91k8.me/index.php/mobile/mobile/item/18">中石化加油卡 500元 无记名加油卡 2000多座加油站 30省市联网使用</a>
+                        </div>
+                        <div class="Progress-bar">
+                        	<div class="proportion">
+	                            <p class="u-progress" title="已完成8.93%">
+									<span class="pgbar" style="width:8.9253187613843%;">
+									<span class="pging"></span>
+									</span>
+	                            </p>
+	                            <ul class="Pro-bar-li">
+	                                <!--<li class="P-bar01"><em>49</em>已参与</li>-->
+	                                <li class="P-bar02"><em>549</em>总需人次</li>
+	                                <li class="P-bar03"><em>500</em>剩余人次</li>
+	                            </ul>
+                           </div>
+                        </div>
+                        <div class="take_part_in">
+                            <a href="javascript:void(0);" class="participation" attr_goodsid="18" attr_maxnum="500" attr_times="1">参与</a>
+                        </div>
+                    </div>
+                </li>
+                <li id="40">
+                    <div class="f_bor_tr">
+                        <div class="m-tj-pic">
+                            <a href="http://wx.91k8.me/index.php/mobile/mobile/item/40" class="u-lott-pic">
+                                <img src="http://wx.91k8.me/statics/templates/yungou/images/loading.jpg" src2="http://wx.91k8.me/statics/uploads/shopimg/20160902/74326280782158.jpg" border=0 alt="" />
+                            </a>
+                            <ins class="u-promo">价值:￥38.00</ins>
+                        </div>
+                        <div class="brand_introduce">
+                            <a href="http://wx.91k8.me/index.php/mobile/mobile/item/40">汽车手机支架 吸盘磁铁式手机支架  使用方便 车辆必备</a>
+                        </div>
+                        <div class="Progress-bar">
+                            <div class="proportion">
+                                <p class="u-progress" title="已完成18.42%">
+									<span class="pgbar" style="width:18.421052631579%;">
+									<span class="pging"></span>
+									</span>
+                                </p>
+                                <ul class="Pro-bar-li">
+                                    <!--<li class="P-bar01"><em>7</em>已参与</li>-->
+                                    <li class="P-bar02"><em>38</em>总需人次</li>
+                                    <li class="P-bar03"><em>31</em>剩余人次</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="take_part_in">
+                            <a href="javascript:void(0);" class="participation" attr_goodsid="40" attr_maxnum="31" attr_times="1">参与</a>
+                        </div>
+                    </div>
+                </li>
+                <li id="41">
+                    <div class="f_bor_tr">
+                        <div class="m-tj-pic">
+                            <a href="http://wx.91k8.me/index.php/mobile/mobile/item/41" class="u-lott-pic">
+                                <img src="http://wx.91k8.me/statics/templates/yungou/images/loading.jpg" src2="http://wx.91k8.me/statics/uploads/shopimg/20160826/30103261176203.jpg" border=0 alt="" />
+                            </a>
+                            <ins class="u-promo">价值:￥49.00</ins>
+                        </div>
+                        <div class="brand_introduce">
+                            <a href="http://wx.91k8.me/index.php/mobile/mobile/item/41">豹王机油格 机滤 汽车保养 更换机油配件 按车型适配</a>
+                        </div>
+                        <div class="Progress-bar">
+                            <div class="proportion">
+                                <p class="u-progress" title="已完成6.12%">
+									<span class="pgbar" style="width:6.1224489795918%;">
+									<span class="pging"></span>
+									</span>
+                                </p>
+                                <ul class="Pro-bar-li">
+                                    <!--<li class="P-bar01"><em>3</em>已参与</li>-->
+                                    <li class="P-bar02"><em>49</em>总需人次</li>
+                                    <li class="P-bar03"><em>46</em>剩余人次</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="take_part_in">
+                            <a href="javascript:void(0);" class="participation" attr_goodsid="41" attr_maxnum="46" attr_times="1">参与</a>
+                        </div>
+                    </div>
+                </li>
+                <li id="35">
+                    <div class="f_bor_tr">
+                        <div class="m-tj-pic">
+                            <a href="http://wx.91k8.me/index.php/mobile/mobile/item/35" class="u-lott-pic">
+                                <img src="http://wx.91k8.me/statics/templates/yungou/images/loading.jpg" src2="http://wx.91k8.me/statics/uploads/shopimg/20160906/68603972154883.jpg" border=0 alt="" />
+                            </a>
+                            <ins class="u-promo">价值:￥46.00</ins>
+                        </div>
+                        <div class="brand_introduce">
+                            <a href="http://wx.91k8.me/index.php/mobile/mobile/item/35">普通洗车服务 开呗养车 单次 全国5000多合作服务门店均可使用</a>
+                        </div>
+                        <div class="Progress-bar">
+                        	<div class="proportion">
+	                            <p class="u-progress" title="已完成34.78%">
+									<span class="pgbar" style="width:34.782608695652%;">
+									<span class="pging"></span>
+									</span>
+	                            </p>
+	                            <ul class="Pro-bar-li">
+	                                <!--<li class="P-bar01"><em>16</em>已参与</li>-->
+	                                <li class="P-bar02"><em>46</em>总需人次</li>
+	                                <li class="P-bar03"><em>30</em>剩余人次</li>
+	                           </ul>
+	                        </div>
+                        </div>
+                        <div class="take_part_in">
+                            <a href="javascript:void(0);" class="participation" attr_goodsid="35" attr_maxnum="30" attr_times="1">参与</a>
+                        </div>
+                    </div>
+                </li>
+                <li id="23">
+                    <div class="f_bor_tr">
+                        <div class="m-tj-pic">
+                            <a href="http://wx.91k8.me/index.php/mobile/mobile/item/23" class="u-lott-pic">
+                                <img src="http://wx.91k8.me/statics/templates/yungou/images/loading.jpg" src2="http://wx.91k8.me/statics/uploads/shopimg/20160906/36606661156540.jpg" border=0 alt="" />
+                            </a>
+                            <ins class="u-promo">价值:￥99.00</ins>
+                        </div>
+                        <div class="brand_introduce">
+                            <a href="http://wx.91k8.me/index.php/mobile/mobile/item/23">精细洗车服务 单次 开呗养车 全国5000多合作服务门店均可使用</a>
+                        </div>
+                        <div class="Progress-bar">
+                        	<div class="proportion">
+	                            <p class="u-progress" title="已完成11.11%">
+									<span class="pgbar" style="width:11.111111111111%;">
+									<span class="pging"></span>
+									</span>
+	                            </p>
+	                            <ul class="Pro-bar-li">
+	                                <!--<li class="P-bar01"><em>11</em>已参与</li>-->
+	                                <li class="P-bar02"><em>99</em>总需人次</li>
+	                                <li class="P-bar03"><em>88</em>剩余人次</li>
+	                           </ul>
+	                        </div>
+                        </div>
+                        <div class="take_part_in">
+                            <a href="javascript:void(0);" class="participation" attr_goodsid="23" attr_maxnum="88" attr_times="1">参与</a>
+                        </div>
+                    </div>
+                </li>
+                <li id="13">
+                    <div class="f_bor_tr">
+                        <div class="m-tj-pic">
+                            <a href="http://wx.91k8.me/index.php/mobile/mobile/item/13" class="u-lott-pic">
+                                <img src="http://wx.91k8.me/statics/templates/yungou/images/loading.jpg" src2="http://wx.91k8.me/statics/uploads/shopimg/20160802/98726703103619.jpg" border=0 alt="" />
+                            </a>
+                            <ins class="u-promo">价值:￥1099.00</ins>
+                        </div>
+                        <div class="brand_introduce">
+                            <a href="http://wx.91k8.me/index.php/mobile/mobile/item/13">太平洋保险 1000 发票总额：1000元 汽车保险</a>
+                        </div>
+                        <div class="Progress-bar">
+                        	<div class="proportion">
+	                            <p class="u-progress" title="已完成0.45%">
+									<span class="pgbar" style="width:0.45495905368517%;">
+									<span class="pging"></span>
+									</span>
+	                            </p>
+	                            <ul class="Pro-bar-li">
+	                                <!--<li class="P-bar01"><em>5</em>已参与</li>-->
+	                                <li class="P-bar02"><em>1099</em>总需人次</li>
+	                                <li class="P-bar03"><em>1094</em>剩余人次</li>
+	                            </ul>
+                           </div>
+                        </div>
+                        <div class="take_part_in">
+                            <a href="javascript:void(0);" class="participation" attr_goodsid="13" attr_maxnum="1094" attr_times="1">参与</a>
+                        </div>
+                    </div>
+                </li>
+                <li id="14">
+                    <div class="f_bor_tr">
+                        <div class="m-tj-pic">
+                            <a href="http://wx.91k8.me/index.php/mobile/mobile/item/14" class="u-lott-pic">
+                                <img src="http://wx.91k8.me/statics/templates/yungou/images/loading.jpg" src2="http://wx.91k8.me/statics/uploads/shopimg/20160730/41295901849294.jpg" border=0 alt="" />
+                            </a>
+                            <ins class="u-promo">价值:￥3199.00</ins>
+                        </div>
+                        <div class="brand_introduce">
+                            <a href="http://wx.91k8.me/index.php/mobile/mobile/item/14">太平洋保险 3000 发票总额：3000元 汽车保险</a>
+                        </div>
+                        <div class="Progress-bar">
+                        	<div class="proportion">
+	                            <p class="u-progress" title="已完成0.03%">
+									<span class="pgbar" style="width:0.031259768677712%;">
+									<span class="pging"></span>
+									</span>
+	                            </p>
+	                            <ul class="Pro-bar-li">
+	                                <!--<li class="P-bar01"><em>1</em>已参与</li>-->
+	                                <li class="P-bar02"><em>3199</em>总需人次</li>
+	                                <li class="P-bar03"><em>3198</em>剩余人次</li>
+	                            </ul>
+                           </div>
+                        </div>
+                        <div class="take_part_in">
+                            <a href="javascript:void(0);" class="participation" attr_goodsid="14" attr_maxnum="3198" attr_times="1">参与</a>
+                        </div>
+                    </div>
+                </li>
+                <li id="7">
+                    <div class="f_bor_tr">
+                        <div class="m-tj-pic">
+                            <a href="http://wx.91k8.me/index.php/mobile/mobile/item/7" class="u-lott-pic">
+                                <img src="http://wx.91k8.me/statics/templates/yungou/images/loading.jpg" src2="http://wx.91k8.me/statics/uploads/shopimg/20160730/56209743847150.png" border=0 alt="" />
+                            </a>
+                            <ins class="u-promo">价值:￥259.00</ins>
+                        </div>
+                        <div class="brand_introduce">
+                            <a href="http://wx.91k8.me/index.php/mobile/mobile/item/7">经济型汽车小保养 单次 含机油与工时费 开呗养车 您身边的养车专家</a>
+                        </div>
+                        <div class="Progress-bar">
+                        	<div class="proportion">
+	                            <p class="u-progress" title="已完成2.70%">
+									<span class="pgbar" style="width:2.7027027027027%;">
+									<span class="pging"></span>
+									</span>
+	                            </p>
+	                            <ul class="Pro-bar-li">
+	                                <!--<li class="P-bar01"><em>7</em>已参与</li>-->
+	                                <li class="P-bar02"><em>259</em>总需人次</li>
+	                                <li class="P-bar03"><em>252</em>剩余人次</li>
+	                            </ul>
+                           </div>
+                        </div>
+                        <div class="take_part_in">
+                            <a href="javascript:void(0);" class="participation" attr_goodsid="7" attr_maxnum="252" attr_times="1">参与</a>
+                        </div>
+                    </div>
+                </li>
+                <li id="8">
+                    <div class="f_bor_tr">
+                        <div class="m-tj-pic">
+                            <a href="http://wx.91k8.me/index.php/mobile/mobile/item/8" class="u-lott-pic">
+                                <img src="http://wx.91k8.me/statics/templates/yungou/images/loading.jpg" src2="http://wx.91k8.me/statics/uploads/shopimg/20160730/92977548847685.png" border=0 alt="" />
+                            </a>
+                            <ins class="u-promo">价值:￥399.00</ins>
+                        </div>
+                        <div class="brand_introduce">
+                            <a href="http://wx.91k8.me/index.php/mobile/mobile/item/8">中级车汽车小保养 单次 开呗养车 含机油与工时费 您身边的养车专家</a>
+                        </div>
+                        <div class="Progress-bar">
+                        	<div class="proportion">
+	                            <p class="u-progress" title="已完成0.75%">
+									<span class="pgbar" style="width:0.75187969924812%;">
+									<span class="pging"></span>
+									</span>
+	                            </p>
+	                            <ul class="Pro-bar-li">
+	                                <!--<li class="P-bar01"><em>3</em>已参与</li>-->
+	                                <li class="P-bar02"><em>399</em>总需人次</li>
+	                                <li class="P-bar03"><em>396</em>剩余人次</li>
+	                            </ul>
+                           </div>
+                        </div>
+                        <div class="take_part_in">
+                            <a href="javascript:void(0);" class="participation" attr_goodsid="8" attr_maxnum="396" attr_times="1">参与</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </article>
+    </section>
+
+
+    ﻿<footer class="footer">
+	<!--<div class="u-ft-nav" id="fLoginInfo">-->
+	    <!--&lt;!&ndash;<span><a href="/?/mobile/mobile">首页</a><b></b></span>&ndash;&gt;-->
+		<!--<span><a href="http://wx.91k8.me/index.php/mobile/mobile/about">新手指南</a><b></b></span>-->
+		<!---->
+		<!--<span><a href="http://wx.91k8.me/index.php/mobile/user/login">登录</a><b></b></span>-->
+		<!--<span><a href="http://wx.91k8.me/index.php/mobile/user/register">注册</a></span>-->
+		<!--	-->
+		<!---->
+	<!--</div>-->
+	<!--<p class="m-ftA">-->
+		<!--<a href="http://wx.91k8.me/index.php/">触屏版</a>|<a href="http://wx.91k8.me/index.php">电脑版</a>-->
+	<!--</p>-->
+    <p>&nbsp;</p>
+	<p class="grayc">客服热线<span class="orange"><a href="tel:400-805-0095">400-805-0095</a>   </span></p>
+	<!--<p class="grayc">www.91k8.me</p>-->
+	<a id="btnTop" href="javascript:;" class="z-top" style="display:none;">
+		<!-- <b class="z-arrow"></b> --><img src="http://wx.91k8.me/statics/templates/yungou/css/images/stick01.png">
+	</a>
+	<a id="shopping_cart" href="http://wx.91k8.me/index.php/mobile/cart/cartlist" class="z-shoppingcart">
+		<img src="http://wx.91k8.me/statics/templates/yungou/css/images/shopping_cart01.png">
+		<ins></ins>
+	</a>
+</footer>
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+<p>
+	<br />
+</p>
+
+<div class="footerdi" style="bottom: 0px;">
+	<ul>
+		<li class="f_home">
+			<a title="首页" href="/?/mobile/mobile"><i class="cur">&nbsp;</i>首页</a>
+		</li>
+		<!--<li class="f_whole">
+			<a title="所有商品" href="http://wx.91k8.me/index.php/mobile/mobile/glist"><i class="">&nbsp;</i>所有商品</a>
+		</li>-->
+		<li class="f_jiexiao">
+			<a title="即将揭晓" href="announce_soon.html"><i class="">&nbsp;</i>即将揭晓</a>
+		</li>
+		<li class="f_car">
+			<a title="购物车" href="http://wx.91k8.me/index.php/mobile/cart/cartlist"><i class="">&nbsp;</i>购物车</a>
+		</li>
+		<li class="f_personal">
+			<a title="我的云购" href="http://wx.91k8.me/index.php/mobile/home"><i class="">&nbsp;</i>个人中心</a>
+		<li>
+	</ul>
+</div>
+
+<script>
+    var init_step = 5;
+    var person_enable =   0;                          //个人能够购买的数量
+    var goods_enable = 120;                           //商品能够购买的数量
+    var goods_id = '';
+
+
+    function go_buy()
+    {
+        //alert('12321');
+    }
+
+    $(document).ready(function(){
+        // update 08-23
+        $.getJSON('http://wx.91k8.me/index.php/mobile/ajax/cartnum',function(data){
+            $("#btnCart").append('<em>'+data.num+'</em>');
+            if(data.num > 0){
+                $('#shopping_cart ins').html(data.num);
+            }
+
+        });
+        $('#person_time').focus(function(){
+            var v = $(this).val();
+            var w = /^[1-9]{1}\d{0,6}$/;
+            if (!w.test(v)) {
+                alert('只能输正整数哦');
+            }
+        })
+        /**参与弹出选择人次**/
+        var showcart = ('.participation');
+        $(document).on('click',showcart,function(){
+
+            if($(this).hasClass('canyudis')){
+                return false;
+            }
+            var default_times = $(this).attr('attr_times');
+            goods_enable = $(this).attr('attr_maxnum');
+            goods_id = $(this).attr('attr_goodsid');
+            $(".choose_people").show();
+            $(".weui_mask_transparent").show();
+            $('#jq_money').html('0');
+            if(default_times>0){
+                $('.person_time').val(default_times);
+            }else{
+                $('.person_time').val(1);
+            }
+        });
+
+
+
+        $('.person_time').blur(function(){
+            var obj = $(this);
+            var this_num = parseInt(obj.val());
+            /*
+            if(person_enable >0 && this_num>person_enable){
+                alert('您的淘币最多购买'+person_enable+'次');
+                $("#person_time").val(person_enable);
+                return false;
+            }
+            */
+            if(this_num>goods_enable){
+                alert('该商品最多能购买'+goods_enable+'次');
+                $("#person_time").val(goods_enable);
+                return false;
+            }
+
+
+        })
+        $("#person_number a").click(function(){
+            var obj = $(this);
+            var this_num = parseInt(obj.html());
+            /*
+            if(person_enable >0 && this_num>person_enable){
+                alert('您的淘币最多购买'+person_enable+'次');
+                $("#person_time").val(person_enable);
+                return false;
+            }
+            */
+            if(this_num>goods_enable){
+                alert('该商品最多能购买'+goods_enable+'次');
+                $("#person_time").val(goods_enable);
+                return false;
+            }
+            $("#person_number a").removeClass("selected");
+            obj.addClass("selected");
+            $("#person_time").val(this_num);
+        })
+        //提交直接购物
+        $(".confirm_btn").click(function(){
+            //$(".weui_mask_transparent").hide();
+            var num = $('#person_time').val();
+            console.log(goods_id+'>'+num);
+            if(num>0){
+                $.getJSON('http://wx.91k8.me/index.php/mobile/ajax/addShopCart/'+goods_id+'/'+num,function(data){
+                    if(data.code==1){
+                        addsuccess('添加失败');
+                    }else if(data.code==0){
+                        addsuccess('添加成功');
+                        //location.href="http://wx.91k8.me/index.php/mobile/cart/cartlist";
+                    }
+                });
+                return false;
+            }else{
+                alert('请添加数量');
+            }
+
+        });
+        function addsuccess(dat){
+            $('.choose_people').hide();
+            $('.weui_mask_transparent').css('display','none');
+            $("#pageDialogBG .Prompt").text("");
+            var w=($(window).width()-255)/2,
+                    h=($(window).height()-45)/2;
+            $("#pageDialogBG").css({top:h,left:w,opacity:0.8});
+            $("#pageDialogBG").stop().fadeIn(1000);
+            $("#pageDialogBG .Prompt").append('<s></s>'+dat);
+            $("#pageDialogBG").fadeOut(1000);
+            //购物车数量
+            $.getJSON('http://wx.91k8.me/index.php/mobile/ajax/cartnum',function(data){
+                $("#btnCart").append('<em>'+data.num+'</em>');
+                if(data.num > 0){
+                    $('#shopping_cart ins').html(data.num);
+                }
+            });
+        }
+
+
+    })
+    //点击加减方法
+    function Calculation(obj){
+        var old_num = parseInt($("#person_time").val());    //当前购买次数
+        if(obj =="reduce"){         //减
+            if(old_num>init_step){
+                $("#person_time").val(old_num-init_step);
+            }else{
+                alert('亲，不能再减了');
+                return false;
+            }
+        }else if(obj =="plus"){
+            var now_num = old_num + init_step;
+            /*
+            if(person_enable>0 && now_num>person_enable){
+                alert('您的淘币最多购买'+person_enable+'次');
+                return false;
+            }
+            */
+            if(now_num>goods_enable){
+                alert('该商品最多能购买'+goods_enable+'次');
+                return false;
+            }
+            $("#person_time").val(now_num);
+        }
+    }
+    //点击数字方法
+    function selected(id){
+        $("#person_number a").each(function(){
+            $(this).removeClass("selected");
+            if($(this).attr("id") == id ){
+                $(this).addClass("selected");
+                $("#person_time").val($(this).text());
+            }
+        });
+    }
+</script>
+    <script language="javascript" type="text/javascript">
+        var Path = new Object();
+        Path.Skin="http://wx.91k8.me/statics/templates/yungou";
+        Path.Webpath = "http://wx.91k8.me/index.php";
+
+        var Base = {
+            head: document.getElementsByTagName("head")[0] || document.documentElement,
+            Myload: function(B, A) {
+                this.done = false;
+                B.onload = B.onreadystatechange = function() {
+                    if (!this.done && (!this.readyState || this.readyState === "loaded" || this.readyState === "complete")) {
+                        this.done = true;
+                        A();
+                        B.onload = B.onreadystatechange = null;
+                        if (this.head && B.parentNode) {
+                            this.head.removeChild(B)
+                        }
+                    }
+                }
+            },
+            getScript: function(A, C) {
+                var B = function() {};
+                if (C != undefined) {
+                    B = C
+                }
+                var D = document.createElement("script");
+                D.setAttribute("language", "javascript");
+                D.setAttribute("type", "text/javascript");
+                D.setAttribute("src", A);
+                this.head.appendChild(D);
+                this.Myload(D, B)
+            },
+            getStyle: function(A, B) {
+                var B = function() {};
+                if (callBack != undefined) {
+                    B = callBack
+                }
+                var C = document.createElement("link");
+                C.setAttribute("type", "text/css");
+                C.setAttribute("rel", "stylesheet");
+                C.setAttribute("href", A);
+                this.head.appendChild(C);
+                this.Myload(C, B)
+            }
+        }
+        function GetVerNum() {
+            var D = new Date();
+            return D.getFullYear().toString().substring(2, 4) + '.' + (D.getMonth() + 1) + '.' + D.getDate() + '.' + D.getHours() + '.' + (D.getMinutes() < 10 ? '0': D.getMinutes().toString().substring(0, 1))
+        }
+        Base.getScript('http://wx.91k8.me/statics/templates/yungou/js/mobile/Bottom.js?v=' + GetVerNum());
+
+        
+    </script>
+
+</div>
+</body>
+</html>
