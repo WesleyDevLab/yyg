@@ -1,0 +1,1156 @@
+2016-10-13 11:28:29, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 11:28:29, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[42]------ D:/wamp/www/goods/upacp_demo_b2c/certs/acp_test_sign.pfx读取失败。 
+2016-10-13 11:28:29, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号： 
+2016-10-13 11:28:29, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 11:28:29, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=777290058110048&orderId=20161013052827&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013052827&txnType=01&version=5.0.0 
+2016-10-13 11:28:29, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >732901f164a2be41051d2f4e63fe3451e6017450 
+2016-10-13 11:28:29, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[42]------ >>>>>签名失败<<<<<<< 
+2016-10-13 11:28:29, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 11:28:29, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="777290058110048" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013052827" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013052827" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 11:28:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 11:28:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[42]------ D:/wamp/www/goods/upacp_demo_b2c/certs/acp_test_sign.pfx读取失败。 
+2016-10-13 11:28:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号： 
+2016-10-13 11:28:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 11:28:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=777290058110048&orderId=20161013052827&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013052827&txnType=01&version=5.0.0 
+2016-10-13 11:28:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >732901f164a2be41051d2f4e63fe3451e6017450 
+2016-10-13 11:28:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[42]------ >>>>>签名失败<<<<<<< 
+2016-10-13 11:28:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 11:28:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="777290058110048" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013052827" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013052827" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 11:29:46, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 11:29:46, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[42]------ D:/wamp/www/goods/upacp_demo_b2c/certs/acp_test_sign.pfx读取失败。 
+2016-10-13 11:29:46, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号： 
+2016-10-13 11:29:46, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 11:29:46, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=700000000000001&orderId=20161013052827&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013052827&txnType=01&version=5.0.0 
+2016-10-13 11:29:46, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >e295c92ed1174d338b3fefc9d33d1f11d68226ba 
+2016-10-13 11:29:46, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[42]------ >>>>>签名失败<<<<<<< 
+2016-10-13 11:29:46, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 11:29:46, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="700000000000001" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013052827" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013052827" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 11:29:54, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 11:29:54, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[42]------ D:/wamp/www/goods/upacp_demo_b2c/certs/acp_test_sign.pfx读取失败。 
+2016-10-13 11:29:54, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号： 
+2016-10-13 11:29:54, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 11:29:54, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=777290058110048&orderId=20161013052952&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013052952&txnType=01&version=5.0.0 
+2016-10-13 11:29:54, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >7f1339a6ceb3948f25a16f9e11430b60a8c88add 
+2016-10-13 11:29:54, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[42]------ >>>>>签名失败<<<<<<< 
+2016-10-13 11:29:54, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 11:29:54, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="777290058110048" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013052952" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013052952" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 11:30:24, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 11:30:24, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 11:30:24, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 11:30:24, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=777290058110048&orderId=20161013052952&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013052952&txnType=01&version=5.0.0 
+2016-10-13 11:30:24, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >7addc6bc804d89240a043fbc5f77ff9b246b63a7 
+2016-10-13 11:30:25, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >NBgR03jijNFuQRH2gSlntXCCsxmRoTk9ad0j8j/mV+BcP8d2mM8YjYX9JjZ2JJnBsVVa0pnlXztM8CvqJtXfbrJoS28DPV7hbjYswwGk9FMYiCBX2nyKlRVPR4clJ8BFxrONSc0UBEEtuB0iOzKZF+Gx/CaD9uQ2j/jb/koEF2/vkMh2MT0Q0JDf1eGIb33uYcS3cI9F1VL9EGTdZYyDXi+oi0vcW29kWWYPEK1Q6rNn95PlxRvRIOCCnZux7hhuMnUfXesBefYUs5yl2sc10lbEYPP80kSC3LhsBy/ap0UmcQiZjpBsrdAG45IZ+fDmGY2X1INhLDAhCZ0mA/6Zvw== 
+2016-10-13 11:30:25, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 11:30:25, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="777290058110048" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013052952" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013052952" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="NBgR03jijNFuQRH2gSlntXCCsxmRoTk9ad0j8j/mV+BcP8d2mM8YjYX9JjZ2JJnBsVVa0pnlXztM8CvqJtXfbrJoS28DPV7hbjYswwGk9FMYiCBX2nyKlRVPR4clJ8BFxrONSc0UBEEtuB0iOzKZF+Gx/CaD9uQ2j/jb/koEF2/vkMh2MT0Q0JDf1eGIb33uYcS3cI9F1VL9EGTdZYyDXi+oi0vcW29kWWYPEK1Q6rNn95PlxRvRIOCCnZux7hhuMnUfXesBefYUs5yl2sc10lbEYPP80kSC3LhsBy/ap0UmcQiZjpBsrdAG45IZ+fDmGY2X1INhLDAhCZ0mA/6Zvw==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 11:30:53, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 11:30:53, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 11:30:53, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 11:30:53, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=777290058110048&orderId=20161013053050&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013053050&txnType=01&version=5.0.0 
+2016-10-13 11:30:53, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >24d3b5bb0eca55565bb1eb0389321b4e4e315651 
+2016-10-13 11:30:53, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >1FMxnBHOz2LO15qtojfUL0EA4lgeGhBb29jzWefzDzGQFQi9goaLrcGNKLOkUJnhvMcH4dHzNNL5PCi9UWnmKNMRdMQG4L3gkYw+29cjnMpDYBedkGJ3l5gXykhl+kiQZeOgmuO/y11GLxIUxqJ+qcPYrVNPOnuOhm2aKrYHWSPIWeSmQfx7FAz7+hbJQvBkn99KE/ygNPr9lALClmrg88/GMaeNdpGTfRwjG7wnOHHbP6Rhttyj9bkp1z/H+JeTASsfwzwjBXNMV/NJ66qhpWM29S3qi1CPzqu9GmfugGtFcrHs6ogElwXFXfBEkXa/wO6S589ED8vLNyNKtk/gUQ== 
+2016-10-13 11:30:53, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 11:30:53, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="777290058110048" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013053050" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013053050" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="1FMxnBHOz2LO15qtojfUL0EA4lgeGhBb29jzWefzDzGQFQi9goaLrcGNKLOkUJnhvMcH4dHzNNL5PCi9UWnmKNMRdMQG4L3gkYw+29cjnMpDYBedkGJ3l5gXykhl+kiQZeOgmuO/y11GLxIUxqJ+qcPYrVNPOnuOhm2aKrYHWSPIWeSmQfx7FAz7+hbJQvBkn99KE/ygNPr9lALClmrg88/GMaeNdpGTfRwjG7wnOHHbP6Rhttyj9bkp1z/H+JeTASsfwzwjBXNMV/NJ66qhpWM29S3qi1CPzqu9GmfugGtFcrHs6ogElwXFXfBEkXa/wO6S589ED8vLNyNKtk/gUQ==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 12:09:55, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 12:09:55, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 12:09:55, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 12:09:55, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=777290058110048&orderId=20161013053050&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013053050&txnType=01&version=5.0.0 
+2016-10-13 12:09:55, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >24d3b5bb0eca55565bb1eb0389321b4e4e315651 
+2016-10-13 12:09:55, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >1FMxnBHOz2LO15qtojfUL0EA4lgeGhBb29jzWefzDzGQFQi9goaLrcGNKLOkUJnhvMcH4dHzNNL5PCi9UWnmKNMRdMQG4L3gkYw+29cjnMpDYBedkGJ3l5gXykhl+kiQZeOgmuO/y11GLxIUxqJ+qcPYrVNPOnuOhm2aKrYHWSPIWeSmQfx7FAz7+hbJQvBkn99KE/ygNPr9lALClmrg88/GMaeNdpGTfRwjG7wnOHHbP6Rhttyj9bkp1z/H+JeTASsfwzwjBXNMV/NJ66qhpWM29S3qi1CPzqu9GmfugGtFcrHs6ogElwXFXfBEkXa/wO6S589ED8vLNyNKtk/gUQ== 
+2016-10-13 12:09:55, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 12:09:55, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="777290058110048" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013053050" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013053050" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="1FMxnBHOz2LO15qtojfUL0EA4lgeGhBb29jzWefzDzGQFQi9goaLrcGNKLOkUJnhvMcH4dHzNNL5PCi9UWnmKNMRdMQG4L3gkYw+29cjnMpDYBedkGJ3l5gXykhl+kiQZeOgmuO/y11GLxIUxqJ+qcPYrVNPOnuOhm2aKrYHWSPIWeSmQfx7FAz7+hbJQvBkn99KE/ygNPr9lALClmrg88/GMaeNdpGTfRwjG7wnOHHbP6Rhttyj9bkp1z/H+JeTASsfwzwjBXNMV/NJ66qhpWM29S3qi1CPzqu9GmfugGtFcrHs6ogElwXFXfBEkXa/wO6S589ED8vLNyNKtk/gUQ==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 12:10:29, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 12:10:29, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 12:10:29, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 12:10:29, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=777290058110048&orderId=20161013053050&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013053050&txnType=01&version=5.0.0 
+2016-10-13 12:10:29, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >24d3b5bb0eca55565bb1eb0389321b4e4e315651 
+2016-10-13 12:10:29, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >1FMxnBHOz2LO15qtojfUL0EA4lgeGhBb29jzWefzDzGQFQi9goaLrcGNKLOkUJnhvMcH4dHzNNL5PCi9UWnmKNMRdMQG4L3gkYw+29cjnMpDYBedkGJ3l5gXykhl+kiQZeOgmuO/y11GLxIUxqJ+qcPYrVNPOnuOhm2aKrYHWSPIWeSmQfx7FAz7+hbJQvBkn99KE/ygNPr9lALClmrg88/GMaeNdpGTfRwjG7wnOHHbP6Rhttyj9bkp1z/H+JeTASsfwzwjBXNMV/NJ66qhpWM29S3qi1CPzqu9GmfugGtFcrHs6ogElwXFXfBEkXa/wO6S589ED8vLNyNKtk/gUQ== 
+2016-10-13 12:10:29, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 12:10:29, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="777290058110048" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013053050" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013053050" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="1FMxnBHOz2LO15qtojfUL0EA4lgeGhBb29jzWefzDzGQFQi9goaLrcGNKLOkUJnhvMcH4dHzNNL5PCi9UWnmKNMRdMQG4L3gkYw+29cjnMpDYBedkGJ3l5gXykhl+kiQZeOgmuO/y11GLxIUxqJ+qcPYrVNPOnuOhm2aKrYHWSPIWeSmQfx7FAz7+hbJQvBkn99KE/ygNPr9lALClmrg88/GMaeNdpGTfRwjG7wnOHHbP6Rhttyj9bkp1z/H+JeTASsfwzwjBXNMV/NJ66qhpWM29S3qi1CPzqu9GmfugGtFcrHs6ogElwXFXfBEkXa/wO6S589ED8vLNyNKtk/gUQ==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 12:12:44, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 12:12:44, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 12:12:44, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 12:12:44, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=777290058110048&orderId=20161013053050&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013053050&txnType=01&version=5.0.0 
+2016-10-13 12:12:44, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >24d3b5bb0eca55565bb1eb0389321b4e4e315651 
+2016-10-13 12:12:44, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >1FMxnBHOz2LO15qtojfUL0EA4lgeGhBb29jzWefzDzGQFQi9goaLrcGNKLOkUJnhvMcH4dHzNNL5PCi9UWnmKNMRdMQG4L3gkYw+29cjnMpDYBedkGJ3l5gXykhl+kiQZeOgmuO/y11GLxIUxqJ+qcPYrVNPOnuOhm2aKrYHWSPIWeSmQfx7FAz7+hbJQvBkn99KE/ygNPr9lALClmrg88/GMaeNdpGTfRwjG7wnOHHbP6Rhttyj9bkp1z/H+JeTASsfwzwjBXNMV/NJ66qhpWM29S3qi1CPzqu9GmfugGtFcrHs6ogElwXFXfBEkXa/wO6S589ED8vLNyNKtk/gUQ== 
+2016-10-13 12:12:44, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 12:12:44, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="777290058110048" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013053050" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013053050" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="1FMxnBHOz2LO15qtojfUL0EA4lgeGhBb29jzWefzDzGQFQi9goaLrcGNKLOkUJnhvMcH4dHzNNL5PCi9UWnmKNMRdMQG4L3gkYw+29cjnMpDYBedkGJ3l5gXykhl+kiQZeOgmuO/y11GLxIUxqJ+qcPYrVNPOnuOhm2aKrYHWSPIWeSmQfx7FAz7+hbJQvBkn99KE/ygNPr9lALClmrg88/GMaeNdpGTfRwjG7wnOHHbP6Rhttyj9bkp1z/H+JeTASsfwzwjBXNMV/NJ66qhpWM29S3qi1CPzqu9GmfugGtFcrHs6ogElwXFXfBEkXa/wO6S589ED8vLNyNKtk/gUQ==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 12:13:03, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 12:13:03, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 12:13:03, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 12:13:03, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=700000000000001&orderId=20161013053050&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013053050&txnType=01&version=5.0.0 
+2016-10-13 12:13:03, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >863118a318fc3f7ee010b91691180bf6b12bfeba 
+2016-10-13 12:13:03, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >TzuPoZpwR5yjk49CU15Q5fi5o/uMK7r7HnoB4qH3ti8EbZOKKJuRIVxZtKTkDp2mrAUnbr4xQcJzLhsNhdK1SEIA1L9G+WrBbUVVUeilRdLwrbEOhKkZL5mPdJ87PmkCCfE6/vUZhBhvYDSmVnSXOgWytYb146o8quRuQXJtUWPnIKllChze6u9UajR2y8lL+C+N58M/DzOTF2zK4Oyr2BZQUfG38j1ADrUqiIGIOpy0TjCsaQC2f5CfwjorwD/5/N155C1yvYjVV93quuXSccTGX/Ed0R7tcNdYNtMKu5ztGYKqU+ZVFEI01qjBzEKAQJ4MCSfH13J52tsloNa8lg== 
+2016-10-13 12:13:03, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 12:13:03, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="700000000000001" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013053050" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013053050" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="TzuPoZpwR5yjk49CU15Q5fi5o/uMK7r7HnoB4qH3ti8EbZOKKJuRIVxZtKTkDp2mrAUnbr4xQcJzLhsNhdK1SEIA1L9G+WrBbUVVUeilRdLwrbEOhKkZL5mPdJ87PmkCCfE6/vUZhBhvYDSmVnSXOgWytYb146o8quRuQXJtUWPnIKllChze6u9UajR2y8lL+C+N58M/DzOTF2zK4Oyr2BZQUfG38j1ADrUqiIGIOpy0TjCsaQC2f5CfwjorwD/5/N155C1yvYjVV93quuXSccTGX/Ed0R7tcNdYNtMKu5ztGYKqU+ZVFEI01qjBzEKAQJ4MCSfH13J52tsloNa8lg==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 12:14:13, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 12:14:13, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 12:14:13, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 12:14:13, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=700000000000001&orderId=20161013053050&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013053050&txnType=01&version=5.0.0 
+2016-10-13 12:14:13, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >863118a318fc3f7ee010b91691180bf6b12bfeba 
+2016-10-13 12:14:13, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >TzuPoZpwR5yjk49CU15Q5fi5o/uMK7r7HnoB4qH3ti8EbZOKKJuRIVxZtKTkDp2mrAUnbr4xQcJzLhsNhdK1SEIA1L9G+WrBbUVVUeilRdLwrbEOhKkZL5mPdJ87PmkCCfE6/vUZhBhvYDSmVnSXOgWytYb146o8quRuQXJtUWPnIKllChze6u9UajR2y8lL+C+N58M/DzOTF2zK4Oyr2BZQUfG38j1ADrUqiIGIOpy0TjCsaQC2f5CfwjorwD/5/N155C1yvYjVV93quuXSccTGX/Ed0R7tcNdYNtMKu5ztGYKqU+ZVFEI01qjBzEKAQJ4MCSfH13J52tsloNa8lg== 
+2016-10-13 12:14:13, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 12:14:13, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="700000000000001" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013053050" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013053050" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="TzuPoZpwR5yjk49CU15Q5fi5o/uMK7r7HnoB4qH3ti8EbZOKKJuRIVxZtKTkDp2mrAUnbr4xQcJzLhsNhdK1SEIA1L9G+WrBbUVVUeilRdLwrbEOhKkZL5mPdJ87PmkCCfE6/vUZhBhvYDSmVnSXOgWytYb146o8quRuQXJtUWPnIKllChze6u9UajR2y8lL+C+N58M/DzOTF2zK4Oyr2BZQUfG38j1ADrUqiIGIOpy0TjCsaQC2f5CfwjorwD/5/N155C1yvYjVV93quuXSccTGX/Ed0R7tcNdYNtMKu5ztGYKqU+ZVFEI01qjBzEKAQJ4MCSfH13J52tsloNa8lg==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 12:21:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 12:21:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 12:21:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 12:21:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=700000000000001&orderId=20161013053050&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013053050&txnType=01&version=5.0.0 
+2016-10-13 12:21:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >863118a318fc3f7ee010b91691180bf6b12bfeba 
+2016-10-13 12:21:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >TzuPoZpwR5yjk49CU15Q5fi5o/uMK7r7HnoB4qH3ti8EbZOKKJuRIVxZtKTkDp2mrAUnbr4xQcJzLhsNhdK1SEIA1L9G+WrBbUVVUeilRdLwrbEOhKkZL5mPdJ87PmkCCfE6/vUZhBhvYDSmVnSXOgWytYb146o8quRuQXJtUWPnIKllChze6u9UajR2y8lL+C+N58M/DzOTF2zK4Oyr2BZQUfG38j1ADrUqiIGIOpy0TjCsaQC2f5CfwjorwD/5/N155C1yvYjVV93quuXSccTGX/Ed0R7tcNdYNtMKu5ztGYKqU+ZVFEI01qjBzEKAQJ4MCSfH13J52tsloNa8lg== 
+2016-10-13 12:21:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 12:21:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="700000000000001" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013053050" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013053050" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="TzuPoZpwR5yjk49CU15Q5fi5o/uMK7r7HnoB4qH3ti8EbZOKKJuRIVxZtKTkDp2mrAUnbr4xQcJzLhsNhdK1SEIA1L9G+WrBbUVVUeilRdLwrbEOhKkZL5mPdJ87PmkCCfE6/vUZhBhvYDSmVnSXOgWytYb146o8quRuQXJtUWPnIKllChze6u9UajR2y8lL+C+N58M/DzOTF2zK4Oyr2BZQUfG38j1ADrUqiIGIOpy0TjCsaQC2f5CfwjorwD/5/N155C1yvYjVV93quuXSccTGX/Ed0R7tcNdYNtMKu5ztGYKqU+ZVFEI01qjBzEKAQJ4MCSfH13J52tsloNa8lg==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 12:22:00, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 12:22:00, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 12:22:00, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 12:22:00, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=700000000000001&orderId=20161013053050&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013053050&txnType=01&version=5.0.0 
+2016-10-13 12:22:00, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >863118a318fc3f7ee010b91691180bf6b12bfeba 
+2016-10-13 12:22:00, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >TzuPoZpwR5yjk49CU15Q5fi5o/uMK7r7HnoB4qH3ti8EbZOKKJuRIVxZtKTkDp2mrAUnbr4xQcJzLhsNhdK1SEIA1L9G+WrBbUVVUeilRdLwrbEOhKkZL5mPdJ87PmkCCfE6/vUZhBhvYDSmVnSXOgWytYb146o8quRuQXJtUWPnIKllChze6u9UajR2y8lL+C+N58M/DzOTF2zK4Oyr2BZQUfG38j1ADrUqiIGIOpy0TjCsaQC2f5CfwjorwD/5/N155C1yvYjVV93quuXSccTGX/Ed0R7tcNdYNtMKu5ztGYKqU+ZVFEI01qjBzEKAQJ4MCSfH13J52tsloNa8lg== 
+2016-10-13 12:22:00, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 12:22:00, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="700000000000001" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013053050" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013053050" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="TzuPoZpwR5yjk49CU15Q5fi5o/uMK7r7HnoB4qH3ti8EbZOKKJuRIVxZtKTkDp2mrAUnbr4xQcJzLhsNhdK1SEIA1L9G+WrBbUVVUeilRdLwrbEOhKkZL5mPdJ87PmkCCfE6/vUZhBhvYDSmVnSXOgWytYb146o8quRuQXJtUWPnIKllChze6u9UajR2y8lL+C+N58M/DzOTF2zK4Oyr2BZQUfG38j1ADrUqiIGIOpy0TjCsaQC2f5CfwjorwD/5/N155C1yvYjVV93quuXSccTGX/Ed0R7tcNdYNtMKu5ztGYKqU+ZVFEI01qjBzEKAQJ4MCSfH13J52tsloNa8lg==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 12:24:31, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 12:24:31, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 12:24:31, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 12:24:31, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=802440355110501&orderId=20161013053050&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013053050&txnType=01&version=5.0.0 
+2016-10-13 12:24:31, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >e82eef5c57f15cb18dbd9a85bf749cacdf6bc495 
+2016-10-13 12:24:31, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >WWv1ZqPSuIGpWMLOMRITmZl23vOzGEItmH3LPpBJ/Fg4jJt33KakO+WSIN/tE3iC7TaYw1U8mrjOyaGs0QHJ5c1FuRKpDutgSwqAQ5tcxK2U4FaxO9sBMoAGxSgPUSMf2omtieKNPSMsYpDIxbNj3EQ0LNs5XikD+I47SjIBa/LM7GxjBhhkcBHkfgPbFb79i2DN8qiIt8UtVM+Oz/0qeX/YwrtoqaxFpGEoq5iYkWe/YEd8KZ3+8KIwCBxQTcx2spofyZuhblsxz445XsPh0EJ9hrcnDcoIo1wbiQe8BgSlrWHRvTVJzYjtkNdGHM8jd9ADiSrIXcXvuQb7T+OUEw== 
+2016-10-13 12:24:31, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 12:24:31, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="802440355110501" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013053050" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013053050" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="WWv1ZqPSuIGpWMLOMRITmZl23vOzGEItmH3LPpBJ/Fg4jJt33KakO+WSIN/tE3iC7TaYw1U8mrjOyaGs0QHJ5c1FuRKpDutgSwqAQ5tcxK2U4FaxO9sBMoAGxSgPUSMf2omtieKNPSMsYpDIxbNj3EQ0LNs5XikD+I47SjIBa/LM7GxjBhhkcBHkfgPbFb79i2DN8qiIt8UtVM+Oz/0qeX/YwrtoqaxFpGEoq5iYkWe/YEd8KZ3+8KIwCBxQTcx2spofyZuhblsxz445XsPh0EJ9hrcnDcoIo1wbiQe8BgSlrWHRvTVJzYjtkNdGHM8jd9ADiSrIXcXvuQb7T+OUEw==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 12:24:42, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 12:24:42, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 12:24:42, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 12:24:42, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=802440355110501&orderId=20161013053050&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013053050&txnType=01&version=5.0.0 
+2016-10-13 12:24:42, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >e82eef5c57f15cb18dbd9a85bf749cacdf6bc495 
+2016-10-13 12:24:42, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >WWv1ZqPSuIGpWMLOMRITmZl23vOzGEItmH3LPpBJ/Fg4jJt33KakO+WSIN/tE3iC7TaYw1U8mrjOyaGs0QHJ5c1FuRKpDutgSwqAQ5tcxK2U4FaxO9sBMoAGxSgPUSMf2omtieKNPSMsYpDIxbNj3EQ0LNs5XikD+I47SjIBa/LM7GxjBhhkcBHkfgPbFb79i2DN8qiIt8UtVM+Oz/0qeX/YwrtoqaxFpGEoq5iYkWe/YEd8KZ3+8KIwCBxQTcx2spofyZuhblsxz445XsPh0EJ9hrcnDcoIo1wbiQe8BgSlrWHRvTVJzYjtkNdGHM8jd9ADiSrIXcXvuQb7T+OUEw== 
+2016-10-13 12:24:42, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 12:24:42, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="802440355110501" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013053050" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013053050" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="WWv1ZqPSuIGpWMLOMRITmZl23vOzGEItmH3LPpBJ/Fg4jJt33KakO+WSIN/tE3iC7TaYw1U8mrjOyaGs0QHJ5c1FuRKpDutgSwqAQ5tcxK2U4FaxO9sBMoAGxSgPUSMf2omtieKNPSMsYpDIxbNj3EQ0LNs5XikD+I47SjIBa/LM7GxjBhhkcBHkfgPbFb79i2DN8qiIt8UtVM+Oz/0qeX/YwrtoqaxFpGEoq5iYkWe/YEd8KZ3+8KIwCBxQTcx2spofyZuhblsxz445XsPh0EJ9hrcnDcoIo1wbiQe8BgSlrWHRvTVJzYjtkNdGHM8jd9ADiSrIXcXvuQb7T+OUEw==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 12:25:05, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 12:25:06, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 12:25:06, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 12:25:06, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=700000000000001&orderId=20161013053050&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013053050&txnType=01&version=5.0.0 
+2016-10-13 12:25:06, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >863118a318fc3f7ee010b91691180bf6b12bfeba 
+2016-10-13 12:25:06, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >TzuPoZpwR5yjk49CU15Q5fi5o/uMK7r7HnoB4qH3ti8EbZOKKJuRIVxZtKTkDp2mrAUnbr4xQcJzLhsNhdK1SEIA1L9G+WrBbUVVUeilRdLwrbEOhKkZL5mPdJ87PmkCCfE6/vUZhBhvYDSmVnSXOgWytYb146o8quRuQXJtUWPnIKllChze6u9UajR2y8lL+C+N58M/DzOTF2zK4Oyr2BZQUfG38j1ADrUqiIGIOpy0TjCsaQC2f5CfwjorwD/5/N155C1yvYjVV93quuXSccTGX/Ed0R7tcNdYNtMKu5ztGYKqU+ZVFEI01qjBzEKAQJ4MCSfH13J52tsloNa8lg== 
+2016-10-13 12:25:06, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 12:25:06, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="700000000000001" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013053050" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013053050" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="TzuPoZpwR5yjk49CU15Q5fi5o/uMK7r7HnoB4qH3ti8EbZOKKJuRIVxZtKTkDp2mrAUnbr4xQcJzLhsNhdK1SEIA1L9G+WrBbUVVUeilRdLwrbEOhKkZL5mPdJ87PmkCCfE6/vUZhBhvYDSmVnSXOgWytYb146o8quRuQXJtUWPnIKllChze6u9UajR2y8lL+C+N58M/DzOTF2zK4Oyr2BZQUfG38j1ADrUqiIGIOpy0TjCsaQC2f5CfwjorwD/5/N155C1yvYjVV93quuXSccTGX/Ed0R7tcNdYNtMKu5ztGYKqU+ZVFEI01qjBzEKAQJ4MCSfH13J52tsloNa8lg==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 12:25:52, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 12:25:52, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 12:25:52, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 12:25:52, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=700000000000001&orderId=20161013053050&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013053050&txnType=01&version=5.0.0 
+2016-10-13 12:25:52, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >863118a318fc3f7ee010b91691180bf6b12bfeba 
+2016-10-13 12:25:52, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >TzuPoZpwR5yjk49CU15Q5fi5o/uMK7r7HnoB4qH3ti8EbZOKKJuRIVxZtKTkDp2mrAUnbr4xQcJzLhsNhdK1SEIA1L9G+WrBbUVVUeilRdLwrbEOhKkZL5mPdJ87PmkCCfE6/vUZhBhvYDSmVnSXOgWytYb146o8quRuQXJtUWPnIKllChze6u9UajR2y8lL+C+N58M/DzOTF2zK4Oyr2BZQUfG38j1ADrUqiIGIOpy0TjCsaQC2f5CfwjorwD/5/N155C1yvYjVV93quuXSccTGX/Ed0R7tcNdYNtMKu5ztGYKqU+ZVFEI01qjBzEKAQJ4MCSfH13J52tsloNa8lg== 
+2016-10-13 12:25:52, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 12:25:52, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="700000000000001" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013053050" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013053050" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="TzuPoZpwR5yjk49CU15Q5fi5o/uMK7r7HnoB4qH3ti8EbZOKKJuRIVxZtKTkDp2mrAUnbr4xQcJzLhsNhdK1SEIA1L9G+WrBbUVVUeilRdLwrbEOhKkZL5mPdJ87PmkCCfE6/vUZhBhvYDSmVnSXOgWytYb146o8quRuQXJtUWPnIKllChze6u9UajR2y8lL+C+N58M/DzOTF2zK4Oyr2BZQUfG38j1ADrUqiIGIOpy0TjCsaQC2f5CfwjorwD/5/N155C1yvYjVV93quuXSccTGX/Ed0R7tcNdYNtMKu5ztGYKqU+ZVFEI01qjBzEKAQJ4MCSfH13J52tsloNa8lg==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 12:26:23, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 12:26:23, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 12:26:23, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 12:26:23, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=700000000000001&orderId=20161013053050&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013053050&txnType=01&version=5.0.0 
+2016-10-13 12:26:23, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >863118a318fc3f7ee010b91691180bf6b12bfeba 
+2016-10-13 12:26:23, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >TzuPoZpwR5yjk49CU15Q5fi5o/uMK7r7HnoB4qH3ti8EbZOKKJuRIVxZtKTkDp2mrAUnbr4xQcJzLhsNhdK1SEIA1L9G+WrBbUVVUeilRdLwrbEOhKkZL5mPdJ87PmkCCfE6/vUZhBhvYDSmVnSXOgWytYb146o8quRuQXJtUWPnIKllChze6u9UajR2y8lL+C+N58M/DzOTF2zK4Oyr2BZQUfG38j1ADrUqiIGIOpy0TjCsaQC2f5CfwjorwD/5/N155C1yvYjVV93quuXSccTGX/Ed0R7tcNdYNtMKu5ztGYKqU+ZVFEI01qjBzEKAQJ4MCSfH13J52tsloNa8lg== 
+2016-10-13 12:26:23, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 12:26:23, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="700000000000001" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013053050" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013053050" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="TzuPoZpwR5yjk49CU15Q5fi5o/uMK7r7HnoB4qH3ti8EbZOKKJuRIVxZtKTkDp2mrAUnbr4xQcJzLhsNhdK1SEIA1L9G+WrBbUVVUeilRdLwrbEOhKkZL5mPdJ87PmkCCfE6/vUZhBhvYDSmVnSXOgWytYb146o8quRuQXJtUWPnIKllChze6u9UajR2y8lL+C+N58M/DzOTF2zK4Oyr2BZQUfG38j1ADrUqiIGIOpy0TjCsaQC2f5CfwjorwD/5/N155C1yvYjVV93quuXSccTGX/Ed0R7tcNdYNtMKu5ztGYKqU+ZVFEI01qjBzEKAQJ4MCSfH13J52tsloNa8lg==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 12:26:29, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 12:26:29, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 12:26:29, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 12:26:29, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=700000000000001&orderId=20161013053050&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013053050&txnType=01&version=5.0.0 
+2016-10-13 12:26:29, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >863118a318fc3f7ee010b91691180bf6b12bfeba 
+2016-10-13 12:26:29, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >TzuPoZpwR5yjk49CU15Q5fi5o/uMK7r7HnoB4qH3ti8EbZOKKJuRIVxZtKTkDp2mrAUnbr4xQcJzLhsNhdK1SEIA1L9G+WrBbUVVUeilRdLwrbEOhKkZL5mPdJ87PmkCCfE6/vUZhBhvYDSmVnSXOgWytYb146o8quRuQXJtUWPnIKllChze6u9UajR2y8lL+C+N58M/DzOTF2zK4Oyr2BZQUfG38j1ADrUqiIGIOpy0TjCsaQC2f5CfwjorwD/5/N155C1yvYjVV93quuXSccTGX/Ed0R7tcNdYNtMKu5ztGYKqU+ZVFEI01qjBzEKAQJ4MCSfH13J52tsloNa8lg== 
+2016-10-13 12:26:29, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 12:26:29, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="700000000000001" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013053050" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013053050" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="TzuPoZpwR5yjk49CU15Q5fi5o/uMK7r7HnoB4qH3ti8EbZOKKJuRIVxZtKTkDp2mrAUnbr4xQcJzLhsNhdK1SEIA1L9G+WrBbUVVUeilRdLwrbEOhKkZL5mPdJ87PmkCCfE6/vUZhBhvYDSmVnSXOgWytYb146o8quRuQXJtUWPnIKllChze6u9UajR2y8lL+C+N58M/DzOTF2zK4Oyr2BZQUfG38j1ADrUqiIGIOpy0TjCsaQC2f5CfwjorwD/5/N155C1yvYjVV93quuXSccTGX/Ed0R7tcNdYNtMKu5ztGYKqU+ZVFEI01qjBzEKAQJ4MCSfH13J52tsloNa8lg==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 12:26:57, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 12:26:57, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 12:26:57, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 12:26:57, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=700000000000001&orderId=20161013062637&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013062637&txnType=01&version=5.0.0 
+2016-10-13 12:26:57, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >fd4838cdba0bac925bfe8b200604849fb02f90f8 
+2016-10-13 12:26:57, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >qiXrog04Oi4LAO6BxyO1f0qF3op+hdXwBgnv/NSivae2yRi7WP+XPyeuozUqfKa7sqAAOIskoY6A4IR8o12mgrUYN8Yrab3RGY+1NkVYtdivCO/jPs7kIcwM+BlhG+BUcHSPaINq+B6AfQOohCOgqCyAOZQ55xbkTYHxQKP7Drf/iYHnA550DFc18M+e+2CwD7KdChM6/H1CUhdBXfDKjMbPL0PxcfsZBcTV5LVwlhN1XUXUr6v8+w7paSOE15u8FODB/NuM4hZbrMoKdE+YzXNiJSVjtCMeEvO+7lQ4qW4RD5HpMDfMFY950iCZT5wtQ5pQyszUVer/3gtsxQVAPQ== 
+2016-10-13 12:26:57, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 12:26:57, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="700000000000001" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013062637" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013062637" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="qiXrog04Oi4LAO6BxyO1f0qF3op+hdXwBgnv/NSivae2yRi7WP+XPyeuozUqfKa7sqAAOIskoY6A4IR8o12mgrUYN8Yrab3RGY+1NkVYtdivCO/jPs7kIcwM+BlhG+BUcHSPaINq+B6AfQOohCOgqCyAOZQ55xbkTYHxQKP7Drf/iYHnA550DFc18M+e+2CwD7KdChM6/H1CUhdBXfDKjMbPL0PxcfsZBcTV5LVwlhN1XUXUr6v8+w7paSOE15u8FODB/NuM4hZbrMoKdE+YzXNiJSVjtCMeEvO+7lQ4qW4RD5HpMDfMFY950iCZT5wtQ5pQyszUVer/3gtsxQVAPQ==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 12:28:05, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 12:28:05, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 12:28:05, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 12:28:05, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=700000000000001&orderId=20161013062745&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013062745&txnType=01&version=5.0.0 
+2016-10-13 12:28:05, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >392f940faa55e0aa434c2777ccec46d467814c31 
+2016-10-13 12:28:05, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >jCzyQXRQ8BgghX9SXWBpgCQitqN7llJAYiXWknGi3Ulu2jHh86busZk251ttJP7BoaPNnDQVbFS9BihZLesm/XsRQA2mAMFhbYNI0TiSqfUfAVNnJtyDxgo15P0L/ikz4vAFb4TUjQVGRl2o7/3hSDcsV6dIqA0ucmFmBZ2T0+q708uFscrw1zBb3IIvqscfBitjRMVTsdo2oIEznnRaoJ5wijAHkWmS4THgu9eOo/rZIzgJxYVVSoZMb9M9GewETheq/or0rHUMVfZ+T/t88FKySUzp81h4NP5Le/8entNhUNxE5iKXaPFdHMHu4yj+d3/nza7m70lIf16iulfSqg== 
+2016-10-13 12:28:05, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 12:28:05, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="700000000000001" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013062745" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013062745" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="jCzyQXRQ8BgghX9SXWBpgCQitqN7llJAYiXWknGi3Ulu2jHh86busZk251ttJP7BoaPNnDQVbFS9BihZLesm/XsRQA2mAMFhbYNI0TiSqfUfAVNnJtyDxgo15P0L/ikz4vAFb4TUjQVGRl2o7/3hSDcsV6dIqA0ucmFmBZ2T0+q708uFscrw1zBb3IIvqscfBitjRMVTsdo2oIEznnRaoJ5wijAHkWmS4THgu9eOo/rZIzgJxYVVSoZMb9M9GewETheq/or0rHUMVfZ+T/t88FKySUzp81h4NP5Le/8entNhUNxE5iKXaPFdHMHu4yj+d3/nza7m70lIf16iulfSqg==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 12:29:32, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 12:29:32, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 12:29:32, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 12:29:32, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=700000000000001&orderId=20161013062745&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013062745&txnType=01&version=5.0.0 
+2016-10-13 12:29:32, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >392f940faa55e0aa434c2777ccec46d467814c31 
+2016-10-13 12:29:32, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >jCzyQXRQ8BgghX9SXWBpgCQitqN7llJAYiXWknGi3Ulu2jHh86busZk251ttJP7BoaPNnDQVbFS9BihZLesm/XsRQA2mAMFhbYNI0TiSqfUfAVNnJtyDxgo15P0L/ikz4vAFb4TUjQVGRl2o7/3hSDcsV6dIqA0ucmFmBZ2T0+q708uFscrw1zBb3IIvqscfBitjRMVTsdo2oIEznnRaoJ5wijAHkWmS4THgu9eOo/rZIzgJxYVVSoZMb9M9GewETheq/or0rHUMVfZ+T/t88FKySUzp81h4NP5Le/8entNhUNxE5iKXaPFdHMHu4yj+d3/nza7m70lIf16iulfSqg== 
+2016-10-13 12:29:32, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 12:29:32, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="700000000000001" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013062745" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013062745" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="jCzyQXRQ8BgghX9SXWBpgCQitqN7llJAYiXWknGi3Ulu2jHh86busZk251ttJP7BoaPNnDQVbFS9BihZLesm/XsRQA2mAMFhbYNI0TiSqfUfAVNnJtyDxgo15P0L/ikz4vAFb4TUjQVGRl2o7/3hSDcsV6dIqA0ucmFmBZ2T0+q708uFscrw1zBb3IIvqscfBitjRMVTsdo2oIEznnRaoJ5wijAHkWmS4THgu9eOo/rZIzgJxYVVSoZMb9M9GewETheq/or0rHUMVfZ+T/t88FKySUzp81h4NP5Le/8entNhUNxE5iKXaPFdHMHu4yj+d3/nza7m70lIf16iulfSqg==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 12:29:38, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 12:29:38, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 12:29:38, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 12:29:38, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=&orderId=&signMethod=01&txnAmt=&txnSubType=01&txnTime=&txnType=01&version=5.0.0 
+2016-10-13 12:29:38, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >23435e9504a8d6e80f5f472e7960c44ef650968c 
+2016-10-13 12:29:38, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >VbGPeAfPnxXH+WNPPmFT2ZAwWcTVkpO7sxyDXEjPN1CNpImHyEp3olWJbfQX6F1XaSOVkUihVqaLxvYbNM5uVXzHscC2ZO/jFbBSr2X8BRZ+ju92x4beCv6RXsLPAGBUZBbt6iLm61r4GbVmRNt/d5GMzpY6KUuXtk/yqiXt86O1NY/rXAQN8t1/l9kh0LpIGq+gJaNFeQqFwh3xj4AuxppBv3Rdth1KfarJqH+K+lDygxQBkBcwVlf7D34t/UCxn684lS2kgu3cPM9yuebaMdKUcQE4un8Z/d5O50czivwPog9QlGgkHBPoY4yLNCRdVzTjSfYQefkhadEzxGXKZQ== 
+2016-10-13 12:29:38, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 12:29:38, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="" />
+    <input type="hidden" name="orderId" id="orderId" value="" />
+    <input type="hidden" name="txnTime" id="txnTime" value="" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="VbGPeAfPnxXH+WNPPmFT2ZAwWcTVkpO7sxyDXEjPN1CNpImHyEp3olWJbfQX6F1XaSOVkUihVqaLxvYbNM5uVXzHscC2ZO/jFbBSr2X8BRZ+ju92x4beCv6RXsLPAGBUZBbt6iLm61r4GbVmRNt/d5GMzpY6KUuXtk/yqiXt86O1NY/rXAQN8t1/l9kh0LpIGq+gJaNFeQqFwh3xj4AuxppBv3Rdth1KfarJqH+K+lDygxQBkBcwVlf7D34t/UCxn684lS2kgu3cPM9yuebaMdKUcQE4un8Z/d5O50czivwPog9QlGgkHBPoY4yLNCRdVzTjSfYQefkhadEzxGXKZQ==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 12:29:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 12:29:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 12:29:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 12:29:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=&orderId=&signMethod=01&txnAmt=&txnSubType=01&txnTime=&txnType=01&version=5.0.0 
+2016-10-13 12:29:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >23435e9504a8d6e80f5f472e7960c44ef650968c 
+2016-10-13 12:29:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >VbGPeAfPnxXH+WNPPmFT2ZAwWcTVkpO7sxyDXEjPN1CNpImHyEp3olWJbfQX6F1XaSOVkUihVqaLxvYbNM5uVXzHscC2ZO/jFbBSr2X8BRZ+ju92x4beCv6RXsLPAGBUZBbt6iLm61r4GbVmRNt/d5GMzpY6KUuXtk/yqiXt86O1NY/rXAQN8t1/l9kh0LpIGq+gJaNFeQqFwh3xj4AuxppBv3Rdth1KfarJqH+K+lDygxQBkBcwVlf7D34t/UCxn684lS2kgu3cPM9yuebaMdKUcQE4un8Z/d5O50czivwPog9QlGgkHBPoY4yLNCRdVzTjSfYQefkhadEzxGXKZQ== 
+2016-10-13 12:29:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 12:29:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="" />
+    <input type="hidden" name="orderId" id="orderId" value="" />
+    <input type="hidden" name="txnTime" id="txnTime" value="" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="VbGPeAfPnxXH+WNPPmFT2ZAwWcTVkpO7sxyDXEjPN1CNpImHyEp3olWJbfQX6F1XaSOVkUihVqaLxvYbNM5uVXzHscC2ZO/jFbBSr2X8BRZ+ju92x4beCv6RXsLPAGBUZBbt6iLm61r4GbVmRNt/d5GMzpY6KUuXtk/yqiXt86O1NY/rXAQN8t1/l9kh0LpIGq+gJaNFeQqFwh3xj4AuxppBv3Rdth1KfarJqH+K+lDygxQBkBcwVlf7D34t/UCxn684lS2kgu3cPM9yuebaMdKUcQE4un8Z/d5O50czivwPog9QlGgkHBPoY4yLNCRdVzTjSfYQefkhadEzxGXKZQ==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 12:29:46, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 12:29:46, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 12:29:46, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 12:29:46, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=700000000000001&orderId=20161013062745&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013062745&txnType=01&version=5.0.0 
+2016-10-13 12:29:46, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >392f940faa55e0aa434c2777ccec46d467814c31 
+2016-10-13 12:29:46, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >jCzyQXRQ8BgghX9SXWBpgCQitqN7llJAYiXWknGi3Ulu2jHh86busZk251ttJP7BoaPNnDQVbFS9BihZLesm/XsRQA2mAMFhbYNI0TiSqfUfAVNnJtyDxgo15P0L/ikz4vAFb4TUjQVGRl2o7/3hSDcsV6dIqA0ucmFmBZ2T0+q708uFscrw1zBb3IIvqscfBitjRMVTsdo2oIEznnRaoJ5wijAHkWmS4THgu9eOo/rZIzgJxYVVSoZMb9M9GewETheq/or0rHUMVfZ+T/t88FKySUzp81h4NP5Le/8entNhUNxE5iKXaPFdHMHu4yj+d3/nza7m70lIf16iulfSqg== 
+2016-10-13 12:29:46, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 12:29:46, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="700000000000001" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013062745" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013062745" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="jCzyQXRQ8BgghX9SXWBpgCQitqN7llJAYiXWknGi3Ulu2jHh86busZk251ttJP7BoaPNnDQVbFS9BihZLesm/XsRQA2mAMFhbYNI0TiSqfUfAVNnJtyDxgo15P0L/ikz4vAFb4TUjQVGRl2o7/3hSDcsV6dIqA0ucmFmBZ2T0+q708uFscrw1zBb3IIvqscfBitjRMVTsdo2oIEznnRaoJ5wijAHkWmS4THgu9eOo/rZIzgJxYVVSoZMb9M9GewETheq/or0rHUMVfZ+T/t88FKySUzp81h4NP5Le/8entNhUNxE5iKXaPFdHMHu4yj+d3/nza7m70lIf16iulfSqg==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 12:31:37, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 12:31:37, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 12:31:37, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 12:31:37, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=700000000000001&orderId=20161013062745&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013062745&txnType=01&version=5.0.0 
+2016-10-13 12:31:37, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >392f940faa55e0aa434c2777ccec46d467814c31 
+2016-10-13 12:31:37, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >jCzyQXRQ8BgghX9SXWBpgCQitqN7llJAYiXWknGi3Ulu2jHh86busZk251ttJP7BoaPNnDQVbFS9BihZLesm/XsRQA2mAMFhbYNI0TiSqfUfAVNnJtyDxgo15P0L/ikz4vAFb4TUjQVGRl2o7/3hSDcsV6dIqA0ucmFmBZ2T0+q708uFscrw1zBb3IIvqscfBitjRMVTsdo2oIEznnRaoJ5wijAHkWmS4THgu9eOo/rZIzgJxYVVSoZMb9M9GewETheq/or0rHUMVfZ+T/t88FKySUzp81h4NP5Le/8entNhUNxE5iKXaPFdHMHu4yj+d3/nza7m70lIf16iulfSqg== 
+2016-10-13 12:31:37, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 12:31:37, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="700000000000001" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013062745" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013062745" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="jCzyQXRQ8BgghX9SXWBpgCQitqN7llJAYiXWknGi3Ulu2jHh86busZk251ttJP7BoaPNnDQVbFS9BihZLesm/XsRQA2mAMFhbYNI0TiSqfUfAVNnJtyDxgo15P0L/ikz4vAFb4TUjQVGRl2o7/3hSDcsV6dIqA0ucmFmBZ2T0+q708uFscrw1zBb3IIvqscfBitjRMVTsdo2oIEznnRaoJ5wijAHkWmS4THgu9eOo/rZIzgJxYVVSoZMb9M9GewETheq/or0rHUMVfZ+T/t88FKySUzp81h4NP5Le/8entNhUNxE5iKXaPFdHMHu4yj+d3/nza7m70lIf16iulfSqg==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 12:56:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 12:56:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 12:56:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 12:56:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=700000000000001&orderId=20161013062637&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013062637&txnType=01&version=5.0.0 
+2016-10-13 12:56:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >fd4838cdba0bac925bfe8b200604849fb02f90f8 
+2016-10-13 12:56:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >qiXrog04Oi4LAO6BxyO1f0qF3op+hdXwBgnv/NSivae2yRi7WP+XPyeuozUqfKa7sqAAOIskoY6A4IR8o12mgrUYN8Yrab3RGY+1NkVYtdivCO/jPs7kIcwM+BlhG+BUcHSPaINq+B6AfQOohCOgqCyAOZQ55xbkTYHxQKP7Drf/iYHnA550DFc18M+e+2CwD7KdChM6/H1CUhdBXfDKjMbPL0PxcfsZBcTV5LVwlhN1XUXUr6v8+w7paSOE15u8FODB/NuM4hZbrMoKdE+YzXNiJSVjtCMeEvO+7lQ4qW4RD5HpMDfMFY950iCZT5wtQ5pQyszUVer/3gtsxQVAPQ== 
+2016-10-13 12:56:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 12:56:41, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="700000000000001" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013062637" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013062637" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="qiXrog04Oi4LAO6BxyO1f0qF3op+hdXwBgnv/NSivae2yRi7WP+XPyeuozUqfKa7sqAAOIskoY6A4IR8o12mgrUYN8Yrab3RGY+1NkVYtdivCO/jPs7kIcwM+BlhG+BUcHSPaINq+B6AfQOohCOgqCyAOZQ55xbkTYHxQKP7Drf/iYHnA550DFc18M+e+2CwD7KdChM6/H1CUhdBXfDKjMbPL0PxcfsZBcTV5LVwlhN1XUXUr6v8+w7paSOE15u8FODB/NuM4hZbrMoKdE+YzXNiJSVjtCMeEvO+7lQ4qW4RD5HpMDfMFY950iCZT5wtQ5pQyszUVer/3gtsxQVAPQ==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 12:58:45, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 12:58:45, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 12:58:45, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 12:58:45, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=700000000000001&orderId=20161013062637&signMethod=01&txnAmt=2000&txnSubType=01&txnTime=20161013062637&txnType=01&version=5.0.0 
+2016-10-13 12:58:45, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >9a0d9007d6dcbb6174358b53ac112eff6c27748d 
+2016-10-13 12:58:45, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >E5l6lQnRGI0c0TlxQsFDgsnf9Cu7etkVwCW39m+NmEt4yby+B5f+E3+mtmyNtX4c/nK4Y3OrrzKQFYOZ77Jbmh/LE5hILfrzBTq0C/cAtpTSr3Zbq1dpV6gtXk1GlddDwDpet4GUTEHC7mHCI1gFiejSaTkjK/puV3bSWglGAvgMdiCJRNnNAhYOdW6TveZC/zuZ2uHgnt+xyBMFingEfazQlxK+aqVwQHlqTq19ZnImCPn6ZBMPnMy4pkXpPsYF3VYOjJcBLlJSDzKdRPa1jfpAT3mhoGJkodowdMJ9IHUItceCMUZGt51fC2cVIPa7nPrWSV+vJ4LchCP6p8c7Bg== 
+2016-10-13 12:58:45, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 12:58:45, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="700000000000001" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013062637" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013062637" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="2000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="E5l6lQnRGI0c0TlxQsFDgsnf9Cu7etkVwCW39m+NmEt4yby+B5f+E3+mtmyNtX4c/nK4Y3OrrzKQFYOZ77Jbmh/LE5hILfrzBTq0C/cAtpTSr3Zbq1dpV6gtXk1GlddDwDpet4GUTEHC7mHCI1gFiejSaTkjK/puV3bSWglGAvgMdiCJRNnNAhYOdW6TveZC/zuZ2uHgnt+xyBMFingEfazQlxK+aqVwQHlqTq19ZnImCPn6ZBMPnMy4pkXpPsYF3VYOjJcBLlJSDzKdRPa1jfpAT3mhoGJkodowdMJ9IHUItceCMUZGt51fC2cVIPa7nPrWSV+vJ4LchCP6p8c7Bg==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 12:59:10, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 12:59:10, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 12:59:10, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 12:59:10, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=700000000000001&orderId=20161013065902&signMethod=01&txnAmt=2000&txnSubType=01&txnTime=20161013065902&txnType=01&version=5.0.0 
+2016-10-13 12:59:10, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >635a18284db29391384f9980424a5b6b8acfad23 
+2016-10-13 12:59:10, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >l+rLSWqmWHEdqrH+PgvVEF4XN608dB2kGnZSTs0RWbXNs6eOmyog+UoKlfVwPzTjl8deGk0Q8btiiNd5hhkU0Jsi/+nttVlDQfRuF6NE9ehafb3dFuNucjNmYq6VreDrgCmppKGDDmihD2yj4wEyouy6VJ3J5PM+APdqAnbjBeWzIlNuzY8uRmnF8ghYcXSqdPcGDvwO/4HKT4o/HEpP+dJXqH8O8u9h9TzSxBA5Egn3Cq7WUq/kyBUdbvYd9D7azr9hE4so0buJKlVZJZ5CTB1C3wxI/xVIvYn5gNXYTF9AGxTuMJ/7AOeHKx0D+PVc3CDpPqQPDojhNCS5ZXa5UQ== 
+2016-10-13 12:59:10, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 12:59:10, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="700000000000001" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013065902" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013065902" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="2000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="l+rLSWqmWHEdqrH+PgvVEF4XN608dB2kGnZSTs0RWbXNs6eOmyog+UoKlfVwPzTjl8deGk0Q8btiiNd5hhkU0Jsi/+nttVlDQfRuF6NE9ehafb3dFuNucjNmYq6VreDrgCmppKGDDmihD2yj4wEyouy6VJ3J5PM+APdqAnbjBeWzIlNuzY8uRmnF8ghYcXSqdPcGDvwO/4HKT4o/HEpP+dJXqH8O8u9h9TzSxBA5Egn3Cq7WUq/kyBUdbvYd9D7azr9hE4so0buJKlVZJZ5CTB1C3wxI/xVIvYn5gNXYTF9AGxTuMJ/7AOeHKx0D+PVc3CDpPqQPDojhNCS5ZXa5UQ==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 12:59:39, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 12:59:39, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 12:59:39, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 12:59:39, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=700000000000001&orderId=20161013065902&signMethod=01&txnAmt=2000&txnSubType=01&txnTime=20161013065902&txnType=01&version=5.0.0 
+2016-10-13 12:59:39, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >635a18284db29391384f9980424a5b6b8acfad23 
+2016-10-13 12:59:39, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >l+rLSWqmWHEdqrH+PgvVEF4XN608dB2kGnZSTs0RWbXNs6eOmyog+UoKlfVwPzTjl8deGk0Q8btiiNd5hhkU0Jsi/+nttVlDQfRuF6NE9ehafb3dFuNucjNmYq6VreDrgCmppKGDDmihD2yj4wEyouy6VJ3J5PM+APdqAnbjBeWzIlNuzY8uRmnF8ghYcXSqdPcGDvwO/4HKT4o/HEpP+dJXqH8O8u9h9TzSxBA5Egn3Cq7WUq/kyBUdbvYd9D7azr9hE4so0buJKlVZJZ5CTB1C3wxI/xVIvYn5gNXYTF9AGxTuMJ/7AOeHKx0D+PVc3CDpPqQPDojhNCS5ZXa5UQ== 
+2016-10-13 12:59:39, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 12:59:39, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://localhost:8085/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="700000000000001" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013065902" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013065902" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="2000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="l+rLSWqmWHEdqrH+PgvVEF4XN608dB2kGnZSTs0RWbXNs6eOmyog+UoKlfVwPzTjl8deGk0Q8btiiNd5hhkU0Jsi/+nttVlDQfRuF6NE9ehafb3dFuNucjNmYq6VreDrgCmppKGDDmihD2yj4wEyouy6VJ3J5PM+APdqAnbjBeWzIlNuzY8uRmnF8ghYcXSqdPcGDvwO/4HKT4o/HEpP+dJXqH8O8u9h9TzSxBA5Egn3Cq7WUq/kyBUdbvYd9D7azr9hE4so0buJKlVZJZ5CTB1C3wxI/xVIvYn5gNXYTF9AGxTuMJ/7AOeHKx0D+PVc3CDpPqQPDojhNCS5ZXa5UQ==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 13:02:33, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 13:02:33, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 13:02:33, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 13:02:33, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://www.goods.com/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=700000000000001&orderId=20161013065902&signMethod=01&txnAmt=2000&txnSubType=01&txnTime=20161013065902&txnType=01&version=5.0.0 
+2016-10-13 13:02:33, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >bd9d4add8a4dec17a2c0cb086a43747138042eec 
+2016-10-13 13:02:33, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >Gmcm4JNK6LUUlF9lA785MhYgLYuzBKlIJTSsTHHqAEbBH47Yu1vvFRuzbr1Hk+lIHkPfvB4PafyyJcwpJQJAQ/i0hHIhHVs/7QZ/sXm3EJ08k8oPvmFEj8YiQJ/4+PmMo/ofmXg/NngKsAvBofCEobb5QxM1CF/c5UUGJsfND8jmQcRa1yTpXTOz5ATXkz2OfFZkJdMRZ0StNQhCX0RFpRYOM5VrGlPVVqz5D2NfrNhCwKl2vrfRsC3tZ71wm46uVmF/vIAp3TlWg2BokGT4h96GLDK+6m/GcyHbVMs2qSrapIPtjL6RPBYqm6HIj2JuPZ4O7ipVdQ3Ui+P6hC2SnA== 
+2016-10-13 13:02:33, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 13:02:33, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.goods.com/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="700000000000001" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013065902" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013065902" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="2000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="Gmcm4JNK6LUUlF9lA785MhYgLYuzBKlIJTSsTHHqAEbBH47Yu1vvFRuzbr1Hk+lIHkPfvB4PafyyJcwpJQJAQ/i0hHIhHVs/7QZ/sXm3EJ08k8oPvmFEj8YiQJ/4+PmMo/ofmXg/NngKsAvBofCEobb5QxM1CF/c5UUGJsfND8jmQcRa1yTpXTOz5ATXkz2OfFZkJdMRZ0StNQhCX0RFpRYOM5VrGlPVVqz5D2NfrNhCwKl2vrfRsC3tZ71wm46uVmF/vIAp3TlWg2BokGT4h96GLDK+6m/GcyHbVMs2qSrapIPtjL6RPBYqm6HIj2JuPZ4O7ipVdQ3Ui+P6hC2SnA==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 13:03:06, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 13:03:06, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 13:03:06, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 13:03:06, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://www.goods.com/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=777290058110048&orderId=20161013070303&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013070303&txnType=01&version=5.0.0 
+2016-10-13 13:03:06, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >ce5a5b7ce11009f1c0fddb25b7551eb92f09a04a 
+2016-10-13 13:03:06, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >M0iNutE9K1XXROmNYRNpkn0AxwFyQEvbdoi3+Yxa9NZmcdA5Ksz9b6pvYj4qTfKLa35R0z3vz/zkIhr7LYxHs+bULipFlBno/ABEsPS61l2SKtzskstJZo3m08zCoilX3v2qXtqABPGJhzveKgYGWm943ZiIerwzdWgkKuNIhXWa2W4wWlsU7TIRzHsItSEkyM2DhLm1s51pQS/VwwRdBC3doXKPSQA2q3DAXVjmcYxDHF9bJGUg6b2VfRqQePX2SwEbvp6eJVBnwUL8clrGMgdhLp26ZkkQofcKVr11GKaVJBntxFy0NbVQLwbpeSUyM0vm3Qh/xFr7+wLFfszTLQ== 
+2016-10-13 13:03:06, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 13:03:06, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.goods.com/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="777290058110048" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013070303" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013070303" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="M0iNutE9K1XXROmNYRNpkn0AxwFyQEvbdoi3+Yxa9NZmcdA5Ksz9b6pvYj4qTfKLa35R0z3vz/zkIhr7LYxHs+bULipFlBno/ABEsPS61l2SKtzskstJZo3m08zCoilX3v2qXtqABPGJhzveKgYGWm943ZiIerwzdWgkKuNIhXWa2W4wWlsU7TIRzHsItSEkyM2DhLm1s51pQS/VwwRdBC3doXKPSQA2q3DAXVjmcYxDHF9bJGUg6b2VfRqQePX2SwEbvp6eJVBnwUL8clrGMgdhLp26ZkkQofcKVr11GKaVJBntxFy0NbVQLwbpeSUyM0vm3Qh/xFr7+wLFfszTLQ==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 13:03:19, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 13:03:19, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 13:03:19, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 13:03:19, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://www.goods.com/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=777290058110048&orderId=20161013070303&signMethod=01&txnAmt=1000&txnSubType=01&txnTime=20161013070303&txnType=01&version=5.0.0 
+2016-10-13 13:03:19, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >ce5a5b7ce11009f1c0fddb25b7551eb92f09a04a 
+2016-10-13 13:03:19, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >M0iNutE9K1XXROmNYRNpkn0AxwFyQEvbdoi3+Yxa9NZmcdA5Ksz9b6pvYj4qTfKLa35R0z3vz/zkIhr7LYxHs+bULipFlBno/ABEsPS61l2SKtzskstJZo3m08zCoilX3v2qXtqABPGJhzveKgYGWm943ZiIerwzdWgkKuNIhXWa2W4wWlsU7TIRzHsItSEkyM2DhLm1s51pQS/VwwRdBC3doXKPSQA2q3DAXVjmcYxDHF9bJGUg6b2VfRqQePX2SwEbvp6eJVBnwUL8clrGMgdhLp26ZkkQofcKVr11GKaVJBntxFy0NbVQLwbpeSUyM0vm3Qh/xFr7+wLFfszTLQ== 
+2016-10-13 13:03:19, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 13:03:19, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.goods.com/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="777290058110048" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013070303" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013070303" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="1000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="M0iNutE9K1XXROmNYRNpkn0AxwFyQEvbdoi3+Yxa9NZmcdA5Ksz9b6pvYj4qTfKLa35R0z3vz/zkIhr7LYxHs+bULipFlBno/ABEsPS61l2SKtzskstJZo3m08zCoilX3v2qXtqABPGJhzveKgYGWm943ZiIerwzdWgkKuNIhXWa2W4wWlsU7TIRzHsItSEkyM2DhLm1s51pQS/VwwRdBC3doXKPSQA2q3DAXVjmcYxDHF9bJGUg6b2VfRqQePX2SwEbvp6eJVBnwUL8clrGMgdhLp26ZkkQofcKVr11GKaVJBntxFy0NbVQLwbpeSUyM0vm3Qh/xFr7+wLFfszTLQ==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
+2016-10-13 13:05:45, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[37]------ 读取签名证书…… 
+2016-10-13 13:05:45, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\cert_util.php ], Line[62]------ 签名证书读取成功，序列号：68759663125 
+2016-10-13 13:05:45, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[22]------ =====签名报文开始====== 
+2016-10-13 13:05:45, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[28]------ 签名key=val&...串 >accessType=0&backUrl=http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php&bizType=000201&certId=68759663125&channelType=08&currencyCode=156&encoding=utf-8&frontUrl=http://www.goods.com/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php&merId=700000000000001&orderId=20161013070303&signMethod=01&txnAmt=2000&txnSubType=01&txnTime=20161013070303&txnType=01&version=5.0.0 
+2016-10-13 13:05:45, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[31]------ 摘要sha1x16 >a88d2b838ea97d288f7d50c9816b6241e7e9339d 
+2016-10-13 13:05:45, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[39]------ 签名串为 >mP4jx6EQBXpb3cRv7Zyy3pwuQMMxsMxhiM8fskra0o+HJs6UbhZryFLJkykq0Gofd27XmAzKV+ARzVP4p3FFXVQVUq7THiGN+LPlwKB6vymgB7C3cv0FQu/2CJtQH8UP09tgBjqck4Xv4y4llwovS0u05VLzL9GhIyRfWZX4XjmvE4/xMljWx0lts+NPkzJ8IzvsgEQEEEQgLYqADp/3j+ix9nyqD+HdbsPsBQQBMOSeLYRtl0vytOTgCJP46US7TPoUEmOfM+A5PKREAfRbKIc1PlKxfuLGFy9eVrw7FfcpuFVOq/lNsubbycILrGWf3x55+17j5ecocCTgmmjUwg== 
+2016-10-13 13:05:45, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[44]------ =====签名报文结束====== 
+2016-10-13 13:05:45, INFO, 127.0.0.1, File[ D:\wamp\www\goods\upacp_demo_b2c\sdk\acp_service.php ], Line[200]------ 自动跳转html><html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="javascript:document.pay_form.submit();">
+    <form id="pay_form" name="pay_form" action="https://101.231.204.80:5000/gateway/api/frontTransReq.do" method="post">
+	    <input type="hidden" name="version" id="version" value="5.0.0" />
+    <input type="hidden" name="encoding" id="encoding" value="utf-8" />
+    <input type="hidden" name="txnType" id="txnType" value="01" />
+    <input type="hidden" name="txnSubType" id="txnSubType" value="01" />
+    <input type="hidden" name="bizType" id="bizType" value="000201" />
+    <input type="hidden" name="frontUrl" id="frontUrl" value="http://www.goods.com/upacp_demo_b2c/demo/api_01_gateway/FrontReceive.php" />
+    <input type="hidden" name="backUrl" id="backUrl" value="http://222.222.222.222/upacp_demo_b2c/demo/api_01_gateway/BackReceive.php" />
+    <input type="hidden" name="signMethod" id="signMethod" value="01" />
+    <input type="hidden" name="channelType" id="channelType" value="08" />
+    <input type="hidden" name="accessType" id="accessType" value="0" />
+    <input type="hidden" name="currencyCode" id="currencyCode" value="156" />
+    <input type="hidden" name="merId" id="merId" value="700000000000001" />
+    <input type="hidden" name="orderId" id="orderId" value="20161013070303" />
+    <input type="hidden" name="txnTime" id="txnTime" value="20161013070303" />
+    <input type="hidden" name="txnAmt" id="txnAmt" value="2000" />
+    <input type="hidden" name="certId" id="certId" value="68759663125" />
+    <input type="hidden" name="signature" id="signature" value="mP4jx6EQBXpb3cRv7Zyy3pwuQMMxsMxhiM8fskra0o+HJs6UbhZryFLJkykq0Gofd27XmAzKV+ARzVP4p3FFXVQVUq7THiGN+LPlwKB6vymgB7C3cv0FQu/2CJtQH8UP09tgBjqck4Xv4y4llwovS0u05VLzL9GhIyRfWZX4XjmvE4/xMljWx0lts+NPkzJ8IzvsgEQEEEQgLYqADp/3j+ix9nyqD+HdbsPsBQQBMOSeLYRtl0vytOTgCJP46US7TPoUEmOfM+A5PKREAfRbKIc1PlKxfuLGFy9eVrw7FfcpuFVOq/lNsubbycILrGWf3x55+17j5ecocCTgmmjUwg==" />
+   <!-- <input type="submit" type="hidden">-->
+    </form>
+</body>
+</html> 
